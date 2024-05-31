@@ -5,18 +5,21 @@ body {
     overflow: hidden;
 
 }
-#mainhome {
+.main-content {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     padding-top: 160px;
-    background-image: url("Photos/40gp-uneedit5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+.main-page {
+    background-image: url("/public/images/40gp-uneedit5.jpg");
 }
 
 #navbar {
@@ -29,12 +32,12 @@ body {
     width: 100%;
     z-index: 1000;
 }
-#logonav img {
+#logoNav img {
     height: 80px;
     width: auto;
 }
 
-#logoptions {
+#logoOptions {
     display: flex;
     justify-content: center;
 }
@@ -75,7 +78,7 @@ body {
     color: #ffd700;
 }
 
-#hometext {
+.homeText {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,13 +90,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 13px;
 }
-#hometext img {
+
+.homeText img {
     width: 300px;
     margin-top: 7px;
 
 }
 
-#hometext p {
+.homeText p {
     margin-top: 15px;
 }
 
@@ -131,15 +135,15 @@ body {
 #footer div p {
     margin: 0;
 }
-#telefoonnnumer {
+#phoneNumber {
     flex-grow: 1;
     text-align: center;
 }
-#adress{
+#address{
     flex-grow: 1;
     text-align: center;
 }
-#tijd{
+#timeLabel{
     flex-grow: 1;
     text-align: center;
 }
@@ -147,4 +151,30 @@ body {
     width: 50px;
     height: auto;
     margin-right: 10px;
+}
+
+.contact-content {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-content ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-content li {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.iframe {
+    width: 100%;
 }
