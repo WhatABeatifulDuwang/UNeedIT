@@ -45,12 +45,10 @@ body {
     background-color: rgba(51, 51, 51, 0.95);
     width: 40%;
     padding: 20px 40px;
-
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: auto;
     border: 2px solid red;
 }
 
@@ -61,7 +59,7 @@ body {
 /* Service Page */
 
 .Service-Container {
-    background-color: black;
+    background-image: url("/public/images/back.jpg");
 }
 .Graphic-Design {
     font-family: Arial, Helvetica, sans-serif;
@@ -119,7 +117,6 @@ body {
     background-color: #000000;
     display: flex;
     margin-left: 270px;
-    justify-content: center;
     justify-content: space-evenly;
     width: 64%;
 }
@@ -130,7 +127,6 @@ body {
     margin-top: 10px;
     display: flex;
     margin-left: 270px;
-    justify-content: center;
     justify-content: space-evenly;
     width: 64%;
 }
@@ -138,7 +134,6 @@ body {
 .Service-Text {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
 }
 
 .Service-Paragraaf {
@@ -149,7 +144,6 @@ body {
 .Service-Text2 {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
 }
 
 .Service-Color {
@@ -159,7 +153,6 @@ body {
 .Onze-Service {
     color: white;
     display: flex;
-    margin-top: 100px;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -179,6 +172,8 @@ body {
 .cred {
     color: red;
 }
+
+/* Faq Page*/
 
 .faq-container {
     max-width: 800px;
@@ -224,9 +219,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.95);
     padding: 10px 20px;
-    position: fixed;
     width: 100%;
     z-index: 1000;
 }
@@ -279,7 +273,7 @@ body {
 
 .homeText {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -314,7 +308,7 @@ body {
 
 
 #footer {
-    background-color: #fff;
+    background-color: rgba(51, 51, 51, 0.95);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -333,6 +327,12 @@ body {
 
 #footer div p {
     margin: 0;
+    color: mediumturquoise;
+    font-weight: bold;
+}
+
+#footer div a {
+    color: #fff;
 }
 
 #phoneNumber {
