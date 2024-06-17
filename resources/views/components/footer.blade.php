@@ -1,0 +1,25 @@
+<footer id="footer">
+    <div id="address">
+        <img src="{{ asset('images/location.png') }}" alt="Location Icon">
+        <p>Zuidbaan 514, 2841MD</p>
+        <p>Moordrecht</p>
+    </div>
+    <div id="phoneNumber">
+        <img src="{{ asset('images/phone.png') }}" alt="Phone Icon">
+        <p>
+            Servicenummer:
+            <a href="tel:+31630985409">+316-30-985-409</a>
+        </p>
+        <p>
+            Kantoor:
+            <a href="tel:+31182820218">+3118-28-202-18</a>
+        </p>
+        <p>Bereikbaar van 09:00-18:00</p>
+    </div>
+    <div id="timeLabel">
+        <img src="{{ asset('images/clock.png') }}" alt="Clock Icon">
+        <p>Ma t/m Vrij, 09:00 - 23:00</p>
+        <p>Telefonisch bereikbaar</p>
+        <p>voor abbonomenthouders</p>
+    </div>
+</footer>
