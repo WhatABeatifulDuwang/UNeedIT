@@ -1,7 +1,7 @@
 <x-layout title="Over Ons">
     <div class="OverOns">
     <div class="red-text" >
-        <p > Over Ons</p>
+        <h1>Over Ons</h1>
     </div>
     <div class="ootext">
         <p class="white-text">

@@ -8,7 +8,7 @@
 <body>
     <nav id="navbar">
         <div id="logoNav">
-            <img src="{{ asset('images/cropped-logo%20UNEED-IT.png') }}" alt="Logo">
+            <a href="{{ url('/')}}"><img src={{asset('images/cropped-logo%20UNEED-IT.png')}} alt="Logo"></a>
         </div>
         <div id="logoOptions">
             <ul>
@@ -22,9 +22,11 @@
             </ul>
         </div>
     </nav>
+    
     <main>
         {{ $slot }}
     </main>
+
     <footer id="footer">
         <div id="address">
             <img src="{{ asset('images/location.png') }}" alt="Location Icon">
