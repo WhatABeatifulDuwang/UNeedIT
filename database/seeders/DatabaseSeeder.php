@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Account;
 use Illuminate\Database\Seeder;
 
-class AccountSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
@@ -14,8 +13,9 @@ class AccountSeeder extends Seeder
      */
     public function run(): void
     {
-        Account::factory()
-            ->count(10)
-            ->create();
+        $this->call([
+            AccountSeeder::class,
+            //RequestSeeder::class
+        ]);
     }
 }
