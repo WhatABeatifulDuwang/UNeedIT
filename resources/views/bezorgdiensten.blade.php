@@ -1,6 +1,6 @@
 <x-layout title="Bezorgdiensten">
-    <div class="bezorgdiensten-container">
-        <div class="bezorgdiensten-text-container">
+    <section class="bezorgdiensten-container">
+        <section class="bezorgdiensten-text-container">
         <h1 class="textbezorg">Bezorgdiensten</h1>
         <p class="textbezorg"> Als gebruiker wil ik informatie zien over bezorgdiensten zoals UPS, DHL, Homerr, zodat ik kan kiezen voor ophalen en verzenden.</p>
         <p class="textbezorg">Kies een bezorgdienst:</p>
@@ -10,9 +10,9 @@
             <li><button class="bezorgdiensten" onclick="selectBezorgdienst('Homerr')">Homerr</button></li>
     
         </ul>
-        <div id="result"></div>
-        </div>
-    </div>
+        <section id="result"></section>
+        </section>
+    </section>
     <script>
         function selectBezorgdienst(bezorgdienst) {
             document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;

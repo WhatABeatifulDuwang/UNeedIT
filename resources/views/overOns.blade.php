@@ -1,9 +1,9 @@
 <x-layout title="Over Ons">
-    <div class="OverOns">
-    <div class="red-text" >
+    <section class="OverOns">
+    <section class="red-text" >
         <h1>Over Ons</h1>
-    </div>
-    <div class="ootext">
+    </section>
+    <section class="ootext">
         <p class="white-text">
             Welkom bij Uneed-it, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-it streven we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid en excellentie in kwaliteit.
         </p>
@@ -16,6 +16,6 @@
         <p class="white-text">
             Kies Uneed-it voor een professionele reparatieservice waarop u kunt vertrouwen. We staan klaar om u te helpen met al uw reparatiebehoeften.
         </p>
-    </div>
-    </div>
+    </section>
+    </section>
 </x-layout>
