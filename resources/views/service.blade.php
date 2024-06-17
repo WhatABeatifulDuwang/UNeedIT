@@ -1,5 +1,5 @@
 <x-layout title="Service">
-<div class="Service-Container main-page">
+<div class="Service-Container">
     <div class="Onze-Service">
         <h1 class="cred">ONZE <span class="Service-Color">SERVICE</span></h1>
     </div>
