@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\Sequence;
 
@@ -18,9 +19,10 @@ class RequestFactory extends Factory
     public function definition()
     {
         return [
-            'device_name' => new Sequence(['iPhone', 'iPad', 'ASUS', 'MSI', 'Samsung', 'HP']),
-            'device_type' => new Sequence(['Phone', 'Tablet', 'Laptop']),
-            'description' => $this->faker->words
+            'device_name' => fake()->name(),
+            'device_type' => fake()->word,
+            'description' => $this->faker->word,
+            'account_id' => $this->faker->randomElement(Account::pluck('id')),
         ];
     }
 }
