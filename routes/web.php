@@ -29,3 +29,7 @@ Route::get('/bezorgdiensten', function () {
 Route::get('/account', function () {
     return view('account');
 });
+
+Route::get('/webshop', function () {
+    return view('webshop');
+});
