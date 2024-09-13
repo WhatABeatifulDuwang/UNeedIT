@@ -68,3 +68,7 @@ Route::put('/games/{game}', function (\Illuminate\Http\Request $request, Account
 
     return redirect('/games');
 });
+
+Route::get('/afspraken', function () {
+    return view(view: 'afspraken');
+});

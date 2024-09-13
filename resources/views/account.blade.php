@@ -1,3 +1,5 @@
+<!-- Gebruikt een layout component en geeft de paginatitel 'Account' door -->
 <x-layout title="Account">
-<h1> Account Page Placeholder</h1>
+    <!-- Koptekst van de pagina -->
+    <h1>Account Page Placeholder</h1>
 </x-layout>
