@@ -27,15 +27,15 @@ Route::get('/bezorgdiensten', function () {
     return view('bezorgdiensten');
 });
 
-Route::get('/accounts', function () {
-    return view('accounts');
+Route::get('/account', function () {
+    return view('account');
 });
 
-Route::get('/accounts/create', function (){
-    return view('accounts.create');
+Route::get('/account/create', function (){
+    return view('account.create');
 });
 
-Route::post('/accounts', function (\Illuminate\Http\Request $request) {
+Route::post('/account', function (\Illuminate\Http\Request $request) {
     $account = $request->validate([
         'name' => 'required|string|min:5|max:20',
         'email' => 'required|unique:accounts,email|email:rfc,dns',
@@ -48,11 +48,11 @@ Route::post('/accounts', function (\Illuminate\Http\Request $request) {
     return redirect('../home.blade.php');
 });
 
-Route::get('/accounts/{account}', function (Account $account){
+Route::get('/account/{account}', function (Account $account){
     return view('accounts.show', compact('account'));
 });
 
-Route::get('/accountss/{account}/edit', function (Account $account){
+Route::get('/account/{account}/edit', function (Account $account){
     return view('accounts.edit', compact('account'));
 });
 
