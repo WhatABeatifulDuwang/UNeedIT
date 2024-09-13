@@ -22,6 +22,9 @@ class RequestFactory extends Factory
             'device_name' => fake()->name(),
             'device_type' => fake()->word,
             'description' => $this->faker->word,
+            'appointment_time' => $this->faker->dateTimeBetween('-5 years', '+5 months'),
+            'place_of_appointment' => $this->faker->address(),
+            'price' => $this->faker->randomFloat(2, 0, 1000),
             'account_id' => $this->faker->randomElement(Account::pluck('id')),
         ];
     }

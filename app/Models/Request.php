@@ -14,6 +14,9 @@ class Request extends Model
         'device_name',
         'device_type',
         'description',
+        'appointment_time',
+        'place_of_appointment',
+        'price',
         'account_id'
     ];
 }

@@ -17,19 +17,28 @@ class RequestSeeder extends Seeder
     public function run()
     {
         Request::factory()
-            ->count(10)
+            ->count(20)
             ->state(new Sequence(
                 ['device_name' => 'iPhone'],
                 ['device_name' => 'iPad'],
                 ['device_name' => 'Samsung'],
                 ['device_name' => 'ASUS'],
                 ['device_name' => 'HP'],
-                ['device_name' => 'Xiaomi']
+                ['device_name' => 'Xiaomi'],
+                ['device_name' => 'Huawei'],
+                ['device_name' => 'Blackberry'],
+                ['device_name' => 'Lenovo'],
+                ['device_name' => 'Oppo'],
+                ['device_name' => 'Apple'],
+                ['device_name' => 'Linux'],
+                ['device_name' => 'Windows'],
             ))
             ->state(new Sequence(
                 ['device_type' => 'Laptop'],
                 ['device_type' => 'Phone'],
-                ['device_type' => 'Tablet']
+                ['device_type' => 'Tablet'],
+                ['device_type' => 'Desktop'],
+                ['device_type' => 'Other']
             ))
             ->create();
     }
