@@ -201,6 +201,10 @@ body {
     margin-left: 50px;
 }
 
+.bezordienstenlc {
+    list-style: none;
+}
+
 .bezorgdiensten {
     display: flex;
     justify-content: center;

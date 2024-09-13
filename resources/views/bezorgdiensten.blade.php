@@ -4,7 +4,7 @@
             <h1 class="textbezorg">Bezorgdiensten</h1>
             <p class="textbezorg">Als gebruiker wil ik informatie zien over bezorgdiensten zoals UPS, DHL, Homerr, zodat ik kan kiezen voor ophalen en verzenden.</p>
             <p class="textbezorg">Kies een bezorgdienst:</p>
-            <ul>
+            <ul class="bezordienstenlc">
                 <!-- Knoppen voor het selecteren van een bezorgdienst -->
                 <li><button class="bezorgdiensten" onclick="selectBezorgdienst('UPS')">UPS</button></li>
                 <li><button class="bezorgdiensten" onclick="selectBezorgdienst('DHL')">DHL</button></li>
