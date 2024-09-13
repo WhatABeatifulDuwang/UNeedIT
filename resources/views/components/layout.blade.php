@@ -50,7 +50,7 @@
             <img src="{{ asset('images/clock.png') }}" alt="Clock Icon">
             <p>Ma t/m Vrij, 09:00 - 23:00</p>
             <p>Telefonisch bereikbaar</p>
-            <p>voor abbonomenthouders</p>
+            <p>voor abonnementhouders</p>
         </section>
     </footer>
 </body>
