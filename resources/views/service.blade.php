@@ -4,10 +4,7 @@
         <section class="Onze-Service">
             <h1 class="cred">ONZE <span class="Service-Color">SERVICE</span></h1>
         </section>
-        <!-- Introductietekst over de diensten -->
-        <section class="Lorem">
-            <p class="Lorem-Text">Dit zijn alle diensten die wij leveren.</p>
-        </section>
+        
         <!-- Lijst van aangeboden diensten -->
         <section class="Service-Align">
             <!-- Graphic Design dienst -->
