@@ -28,7 +28,7 @@ body {
     padding-bottom: 300px;
     min-height: 100vh;
     overflow-y: auto;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    border: 3px solid red;      
+    border: 3px solid red;
 }
 
 .ootext p {
@@ -74,8 +74,8 @@ body {
     width: 500px;
     height: 270px;
     margin-right: 1vh;
-    margin-left: 1vh;           
-    justify-content: center;    
+    margin-left: 1vh;
+    justify-content: center;
 }
 
 .Graphic-Design1 {
@@ -90,10 +90,10 @@ body {
     transition: 0.2s;
     width: 500px;
     height: 270px;
-    margin-left: 1vh;   
+    margin-left: 1vh;
     margin-right: 1vh;
     justify-content: center;
-}   
+}
 
 .Graphic-Design:hover {
     border: solid 2px;
@@ -130,7 +130,7 @@ body {
     padding: 10px;
     background-color: rgba(51, 51, 51, 0.95);
     border-radius: 10px;
-    margin-top: 5px;    
+    margin-top: 5px;
     display: flex;
     margin-left: 10vw;
     justify-content: space-evenly;
@@ -154,7 +154,7 @@ body {
 
 .Service-Color {
     color: mediumturquoise;
-    font-size: 4vh; 
+    font-size: 4vh;
 }
 
 .Onze-Service {
@@ -172,7 +172,7 @@ body {
 }
 
 .Lorem-Text {
-    width: 285px;   
+    width: 285px;
 }
 
 .cred {
@@ -227,7 +227,7 @@ body {
 
 /* Faq Page*/
 
-.faq-page-container { 
+.faq-page-container {
     background-image: url("/public/images/back.jpg"); /* Placeholder Img */
     height: 100vh;
     width: 100vw;
@@ -289,9 +289,19 @@ body {
     font-size: 20px;
 }
 
+.contact-content li a{
+    color: blue;
+}
+
+.contact-content li a:hover{
+    color: #ffd700;
+}
+
 .iframe {
     width: 100%;
 }
+
+/* Navbar */
 
 #navbar {
     display: flex;
@@ -379,14 +389,15 @@ body {
 
 .blue-text {
     color: mediumturquoise;
-    font-size: 3vh; 
+    font-size: 3vh;
 }
 
 .red-text {
-    color: red;             
-    font-size: 3vh;    
+    color: red;
+    font-size: 3vh;
 }
 
+/* Footer */
 
 #footer {
     background-color: rgba(51, 51, 51, 0.95);
@@ -405,7 +416,7 @@ body {
 }
 
 #footer:hover {
-    height: 100px;
+    height: 110px;
 }
 
 
@@ -422,6 +433,10 @@ body {
 
 #footer section a {
     color: #fff;
+}
+
+#footer section a:hover {
+    color: #ffd700;
 }
 
 #phoneNumber {

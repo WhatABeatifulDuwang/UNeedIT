@@ -3,10 +3,10 @@
 <head>
     <!-- Charset instellen voor juiste karaktercodering -->
     <meta charset="UTF-8">
-    
+
     <!-- Titel van de pagina, dynamisch ingesteld via de $title variabele, default naar 'Untitled' als er geen titel is -->
     <title>{{ $title ?? 'Untitled' }}</title>
-    
+
     <!-- Laadt de CSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/css/app.css')
 </head>
@@ -36,7 +36,7 @@
             </ul>
         </section>
     </nav>
-    
+
     <!-- Hoofdinhoud van de pagina, dynamisch ingevoegd via de $slot variabele -->
     <main>
         {{ $slot }}
@@ -59,7 +59,7 @@
                 <a href="tel:+31630985409">+316-30-985-409</a>
             </p>
             <p>
-                Kantoor:
+                Kantoornummer:
                 <a href="tel:+31182820218">+3118-28-202-18</a>
             </p>
             <p>Bereikbaar van 09:00-18:00</p>
