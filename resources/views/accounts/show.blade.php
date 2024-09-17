@@ -1,7 +1,7 @@
 <x-layout title="Account">
-    <div class="account-info">
+    <section class="account-info">
         <h1>My Account</h1>
-        <div class="info-block">
+        <section class="info-block">
             <?php
             session_start();
             if (isset($_SESSION['user'])) {
@@ -15,11 +15,11 @@
                 exit();
             }
             ?>
-        </div>
-    </div>
-    <div class="edit-info" style="display: none;">
+        </section>
+    </section>
+    <section class="edit-info" style="display: none;">
         <h1>Edit Information</h1>
-        <div class="changeForm">
+        < class="changeForm">
             <form id="changeInfoForm" action="changeinfo.php" method="post" onsubmit="handleFormSubmission()">
                 <label for="newName">New Name:</label><br>
                 <input type="text" id="newName" name="newName" value="<?php echo $user['naam']; ?>"><br>
@@ -29,23 +29,19 @@
                 <input type="text" id="newAddress" name="newAddress" value="<?php echo $user['address']; ?>"><br>
                 <label for="newEmail">Email:</label><br>
                 <input type="text" id="newEmail" name="newEmail" value="<?php echo $user['email']; ?>"><br>
-
-                <div class="button-group">
+                <section class="button-group">
                     <button type="submit" style="background-color: mediumturquoise;">Wijzigingen opslaan</button>
                     <button type="button" onclick="cancelChanges()" id="cancelButton" style="background-color: red;">Cancel Changes</button>
-                </div>
+                </section>
             </form>
-        </div>
-    </div>
-
-    <div class="buttons">
+        </section>>
+    </section>
+    <section class="buttons">
         <button id="editButton">Informatie bewerken</button>
-
         <form action="logout.php" method="post">
             <button type="submit" name="logout">Log Out</button>
         </form>
-    </div>
-
+    </section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             function toggleEdit() {
@@ -53,7 +49,7 @@
                 var editBlock = document.querySelector('.edit-info');
                 var editButton = document.getElementById('editButton');
                 var cancelButton = document.getElementById('cancelButton');
-    
+
                 if (infoBlock.style.display === 'none') {
                     infoBlock.style.display = 'block';
                     editBlock.style.display = 'none';
@@ -67,7 +63,7 @@
                     populateForm();
                 }
             }
-    
+
             function populateForm() {
                 var user = <?php echo json_encode($user); ?>;
                 document.getElementById('newName').value = user.naam;
@@ -75,29 +71,28 @@
                 document.getElementById('newAddress').value = user.address;
                 document.getElementById('newEmail').value = user.email;
             }
-    
+
             function cancelChanges() {
                 var infoBlock = document.querySelector('.info-block');
                 var editBlock = document.querySelector('.edit-info');
                 var editButton = document.getElementById('editButton');
                 var cancelButton = document.getElementById('cancelButton');
-    
+
                 infoBlock.style.display = 'block';
                 editBlock.style.display = 'none';
                 cancelButton.style.display = 'none';
                 editButton.style.display = 'block';
             }
-    
+
             var editButton = document.getElementById('editButton');
             editButton.addEventListener('click', function() {
                 toggleEdit();
             });
-    
+
             var cancelButton = document.getElementById('cancelButton');
             cancelButton.addEventListener('click', function() {
                 cancelChanges();
             });
         });
     </script>
-
 </x-layout>

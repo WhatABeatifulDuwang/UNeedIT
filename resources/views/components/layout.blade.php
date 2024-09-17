@@ -31,7 +31,7 @@
                 <li class="bluec"><a href="{{ url('/bezorgdiensten') }}">Bezorgdiensten</a></li>
                 <li class="redc"><a href="{{ url('/faq') }}">FAQ</a></li>
                 <li class="bluec"><a href="{{ url('/contact') }}">Contact</a></li>
-                <li class="redc"><a href="{{ url('/account') }}">Account</a></li>
+                <li class="redc"><a href="{{ url('/accounts') }}">Account</a></li>
                 <li class="bluec"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
             </ul>
         </section>
