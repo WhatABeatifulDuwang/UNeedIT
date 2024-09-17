@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding-bottom: 100px;
     position: relative;
-    overflow: hidden;   
+    overflow-x: hidden;   
 }
 
 .main-content {
@@ -182,7 +182,7 @@ body {
 
 /* Bezorgdiensten Page*/
 
-.bezorgdiensten-container {
+.bezorgdiensten-container { 
     background-image: url("/public/images/back.jpg"); /* Placeholder Img */
     height: 100vh;
     display: grid;
@@ -194,21 +194,24 @@ body {
     color: white;
     margin-top: 20vh;
     padding-right: 20px;
-    height: 30vh;
+    height: 45vh;       
     width: 40vw;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgba(51, 51, 51, 0.95);
 }
 
 .textbezorg {
-    font-size: 25px;
+    font-size: 3vh;
     display: flex;
     justify-content: center;
     margin-left: 50px;
+    text-align: center;
 }
 
 .bezordienstenlc {
     list-style: none;
+    text-align: center;
+
 }
 
 .bezorgdiensten {
@@ -216,7 +219,11 @@ body {
     justify-content: center;
     width: 20vw;
     margin-left: 9.8vw;
+    text-align: center;
+    font-size: 2vh;
 }
+
+
 
 /* Faq Page*/
 
@@ -226,19 +233,21 @@ body {
     width: 100vw;
     display: grid;
     justify-content: center;
+    
 }
 
 .faq-container {
     color: white;
-    font-size: 23px;
+    font-size: 2vh;
     margin-top: 20vh;
     height: 360px;
     width: 800px;
     padding: 20px;
     background-color: rgba(51, 51, 51, 0.95);
-    border: 2px solid red;
+    border: 3px solid red;  
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;     
 }
 
 .question {
@@ -324,8 +333,8 @@ body {
 #navbar ul li a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: #fff;
+    font-size: 2vh;     
+    color: #fff;    
 }
 
 #navbar ul li.redc a {
@@ -434,6 +443,11 @@ body {
     width: 50px;
     height: auto;
     margin-right: 10px;
+}
+
+#result {
+    text-align: center;
+    font-size: 3vh;
 }
 
 /* Calender */

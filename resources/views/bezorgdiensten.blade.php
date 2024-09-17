@@ -21,4 +21,5 @@
             document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
         }
     </script>
+    
 </x-layout>
