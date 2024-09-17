@@ -27,15 +27,15 @@ Route::get('/bezorgdiensten', function () {
     return view('bezorgdiensten');
 });
 
-Route::get('/account', function () {
+Route::get('/accounts', function () {
     return view('account');
 });
 
-Route::get('/account/create', function (){
-    return view('account.create');
+Route::get('/accounts/create', function (){
+    return view('accounts.create');
 });
 
-Route::post('/account', function (\Illuminate\Http\Request $request) {
+Route::post('/accounts', function (\Illuminate\Http\Request $request) {
     $account = $request->validate([
         'name' => 'required|string|min:5|max:20',
         'email' => 'required|unique:accounts,email|email:rfc,dns',
@@ -44,19 +44,20 @@ Route::post('/account', function (\Illuminate\Http\Request $request) {
     ]);
 
     Account::create($account);
+    session_start();
 
-    return redirect('../home.blade.php');
+    return redirect('home.blade.php');
 });
 
-Route::get('/account/{account}', function (Account $account){
+Route::get('/accounts/{account}', function (Account $account){
     return view('accounts.show', compact('account'));
 });
 
-Route::get('/account/{account}/edit', function (Account $account){
+Route::get('/accounts/{account}/edit', function (Account $account){
     return view('accounts.edit', compact('account'));
 });
 
-Route::put('/games/{game}', function (\Illuminate\Http\Request $request, Account $account){
+Route::put('/accounts/{account}', function (\Illuminate\Http\Request $request, Account $account){
     $account->update($request->validate([
         'name' => 'required|string|min:5|max:20',
         'email' => 'required|unique:accounts,email|email:rfc,dns',
@@ -66,7 +67,7 @@ Route::put('/games/{game}', function (\Illuminate\Http\Request $request, Account
 
     $account->save();
 
-    return redirect('/games');
+    return redirect('/accounts');
 });
 
 Route::get('/afspraken', function () {
