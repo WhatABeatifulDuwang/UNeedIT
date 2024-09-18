@@ -1,5 +1,6 @@
 <!-- Gebruikt de layout component en geeft de paginatitel 'Afspraken' door -->
 <x-layout title="Afspraken">
+  <section class="afspraken-container">
     <div class="calendar">
         <div class="month"><a href="#" class="nav"><i class="fas fa-angle-left"></i></a><div>January <span class="year">2019</span></div><a href="#" class="nav"><i class="fas fa-angle-right"></i></a></div>
         <div class="days">
@@ -107,4 +108,5 @@
             </button>
         </div>
       </div>
+  </section>
 </x-layout>

@@ -467,7 +467,13 @@ body {
 
 /* Calender */
 
+.afspraken-container {
+    display: flex;
+    justify-content: center;
+}
+
 .calendar {
+    margin-top: 16vh;
     display: inline-grid;
     justify-content: center;
     align-items: center;
