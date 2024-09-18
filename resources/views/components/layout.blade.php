@@ -33,6 +33,7 @@
                 <li class="bluec"><a href="{{ url('/contact') }}">Contact</a></li>
                 <li class="redc"><a href="{{ url('/accounts') }}">Account</a></li>
                 <li class="bluec"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
+                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
             </ul>
         </section>
     </nav>

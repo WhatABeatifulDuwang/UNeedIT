@@ -73,3 +73,7 @@ Route::put('/accounts/{account}', function (\Illuminate\Http\Request $request, A
 Route::get('/afspraken', function () {
     return view(view: 'afspraken');
 });
+
+Route::get('/webshop', function () {
+    return view(view: 'webshop');
+});

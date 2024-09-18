@@ -5,7 +5,7 @@
             <section>
                 <!-- Contactgegevens -->
                 <ul>
-                    <li><strong>Email:</strong><a href="mailto:info@uneed-it.nl">info@uneed-it.nl</a></li>
+                    <li><strong>Email:</strong><a href="mailto:info@uneed-it.com">info@uneed-it.com</a></li>
                     <li><strong>Facebook:</strong><a href="https://www.facebook.com/ikmaakhetwel.nl/">Uneed-IT</a></li>
                     <li><strong>Twitter:</strong><a href="https://twitter.com/johnsips/">Uneed-IT</a></li>
                 </ul>
