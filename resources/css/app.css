@@ -8,7 +8,6 @@ body {
 .main-content {
     font-size: 4vh;
     color: red;
-    text-shadow: #FC0 1px 0 10px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -271,6 +270,7 @@ body {
 /* Contact Page */
 
 .contact-content {
+    text-shadow: rgba(51, 51, 51, 0.95) 2px 0 10px;
     margin: 0;
     padding: 0 20px;
     width: 100%;
