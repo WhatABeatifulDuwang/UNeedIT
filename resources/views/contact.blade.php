@@ -1,7 +1,7 @@
 <x-layout title="Contact">
     <section class="main-content">
         <section class="contact-content">
-            <h1>Neem contact met ons op!</h1>
+            <h1><b>Neem contact met ons op!</b></h1>
             <section>
                 <!-- Contactgegevens -->
                 <ul>

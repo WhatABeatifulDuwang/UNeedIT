@@ -6,6 +6,9 @@ body {
 }
 
 .main-content {
+    font-size: 4vh;
+    color: red;
+    text-shadow: #FC0 1px 0 10px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -15,7 +18,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-image: url("/public/images/uneeditcont.jpg");
 }
 
 .main-page {
@@ -372,7 +375,7 @@ body {
     border-radius: 13px;
 }
 
-.homeText img {
+.homeText img { 
     width: 20vw;
     margin-top: 7px;
 
