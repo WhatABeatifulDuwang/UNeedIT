@@ -1,9 +1,13 @@
 <x-layout title="Over Ons">
     <section class="OverOns">
         <!-- Titel van de pagina -->
-        <section class="red-text">
-            <h1>Over Ons</h1>
+        <section class="Uneed-Title">
+            <h1>
+                <span class="cred">OVER</span>
+                <span class="cblue">ONS</span>
+            </h1>
         </section>
+        <hr class="line">
         <!-- Hoofdtekst over het bedrijf -->
         <section class="ootext">
             <p class="white-text">

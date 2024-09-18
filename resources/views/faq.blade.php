@@ -1,6 +1,11 @@
 <x-layout title="FAQ">
     <body>
         <section class="faq-page-container">
+            <section class="Uneed-Title">
+                <h1>
+                    <span class="cred">FAQ</span>
+                </h1>
+            </section>
             <section class="faq-container">
                 <!-- Vraag met onclick om het bijbehorende antwoord te tonen -->
                 <section class="question" onclick="toggleAnswer(1)">What is Lorem Ipsum?</section>

@@ -1,10 +1,10 @@
 <x-layout title="Service">
     <section class="Service-Container">
         <!-- Hoofdtitel voor de servicepagina -->
-        <section class="Onze-Service">
-            <h1 class="cred">ONZE <span class="Service-Color">SERVICE</span></h1>
+        <section class="Uneed-Title">
+            <h1 class="cred">ONZE <span class="cblue">SERVICE</span></h1>
         </section>
-        
+        <hr class="line">
         <!-- Lijst van aangeboden diensten -->
         <section class="Service-Align">
             <!-- Graphic Design dienst -->

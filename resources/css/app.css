@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding-bottom: 100px;
     position: relative;
-    overflow-x: hidden;   
+    overflow-x: hidden;
 }
 
 .main-content {
@@ -20,6 +20,24 @@ body {
 
 .main-page {
     background-image: url("/public/images/40gp-uneedit5.jpg");
+}
+
+.Uneed-Title {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.cred {
+    color: red;
+    font-size: 4vh;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.cblue {
+    color: mediumturquoise;
+    font-size: 4vh;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 /* Over Ons Page*/
@@ -137,30 +155,14 @@ body {
     width: 78vw;
 }
 
-.Service-Text {
-    margin-top: 50px;
-    display: flex;
-}
-
 .Service-Paragraaf {
     width: 300px;
 
 }
 
-.Service-Text2 {
+.Service-Text {
     margin-top: 50px;
     display: flex;
-}
-
-.Service-Color {
-    color: mediumturquoise;
-    font-size: 4vh;
-}
-
-.Onze-Service {
-    display: flex;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .Lorem {
@@ -175,14 +177,14 @@ body {
     width: 285px;
 }
 
-.cred {
-    color: red;
-    font-size: 4vh;
-}
-
 /* Bezorgdiensten Page*/
 
-.bezorgdiensten-container { 
+hr.line {
+    border: 1px red solid;
+    width: 50%;
+}
+
+.bezorgdiensten-container {
     background-image: url("/public/images/back.jpg"); /* Placeholder Img */
     height: 100vh;
     display: grid;
@@ -192,9 +194,8 @@ body {
 .bezorgdiensten-text-container {
     border: 2px solid red;
     color: white;
-    margin-top: 20vh;
-    padding-right: 20px;
-    height: 45vh;       
+    margin-top: 12vh;
+    height: 47vh;
     width: 40vw;
     border-radius: 20px;
     background-color: rgba(51, 51, 51, 0.95);
@@ -204,7 +205,6 @@ body {
     font-size: 3vh;
     display: flex;
     justify-content: center;
-    margin-left: 50px;
     text-align: center;
 }
 
@@ -218,12 +218,10 @@ body {
     display: flex;
     justify-content: center;
     width: 20vw;
-    margin-left: 9.8vw;
+    margin-left: 7.8vw;
     text-align: center;
     font-size: 2vh;
 }
-
-
 
 /* Faq Page*/
 
@@ -233,32 +231,34 @@ body {
     width: 100vw;
     display: grid;
     justify-content: center;
-    
+
 }
 
 .faq-container {
     color: white;
     font-size: 2vh;
-    margin-top: 20vh;
-    height: 360px;
+    height: auto;
+    max-height: 500px;
     width: 800px;
     padding: 20px;
     background-color: rgba(51, 51, 51, 0.95);
-    border: 3px solid red;  
+    border: 3px solid red;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;     
+    /*text-align: center;*/
 }
 
 .question {
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 8px;
     cursor: pointer;
 }
 
 .answer {
     display: none;
     padding-left: 20px;
+    margin-bottom: 2px;
 }
 
 .answer.show {
@@ -343,8 +343,8 @@ body {
 #navbar ul li a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2vh;     
-    color: #fff;    
+    font-size: 2vh;
+    color: #fff;
 }
 
 #navbar ul li.redc a {

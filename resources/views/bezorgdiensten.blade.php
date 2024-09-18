@@ -1,7 +1,12 @@
 <x-layout title="Bezorgdiensten">
     <section class="bezorgdiensten-container">
         <section class="bezorgdiensten-text-container">
-            <h1 class="textbezorg">Bezorgdiensten</h1>
+            <section class="Uneed-Title">
+                <h1>
+                    <span class="cred">BEZORGDIENSTEN</span>
+                </h1>
+            </section>
+            <hr class="line">
             <p class="textbezorg">Als gebruiker wil ik informatie zien over bezorgdiensten zoals UPS, DHL, Homerr, zodat ik kan kiezen voor ophalen en verzenden.</p>
             <p class="textbezorg">Kies een bezorgdienst:</p>
             <ul class="bezordienstenlc">
@@ -21,5 +26,5 @@
             document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
         }
     </script>
-    
+
 </x-layout>
