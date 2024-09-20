@@ -9,6 +9,9 @@
 
     <!-- Laadt de CSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/css/app.css')
+
+    <!-- Laadt de JS-bestanden, gebundeld en gecompileerd door Vite -->
+    @vite('resources/js/app.js')
 </head>
 <body>
     <!-- Navigatiebalk -->
