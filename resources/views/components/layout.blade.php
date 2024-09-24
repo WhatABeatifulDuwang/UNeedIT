@@ -10,8 +10,8 @@
     <!-- Laadt de CSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/css/app.css')
 
-    <!-- Laadt de JS-bestanden, gebundeld en gecompileerd door Vite -->
-    @vite('resources/js/app.js')
+    <!-- Laadt de JS-bestanden -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
     <!-- Navigatiebalk -->

@@ -475,6 +475,10 @@ hr.line {
     justify-content: center;
 }
 
+.calanderAppointment {
+    display: none;
+}
+
 .calendar {
     margin-top: 16vh;
     display: inline-grid;
