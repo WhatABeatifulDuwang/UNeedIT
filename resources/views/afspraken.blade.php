@@ -3,9 +3,9 @@
   <section class="afspraken-container">
     <div class="calendar">
       <?php
-      $month = "September";
-      $year = 2024;
-      $days = 31;
+      $month = (new \DateTime())->format('M');
+      $year = (new \DateTime())->format('Y');
+      $days = date("t");
       ?>
         <div class="month"><a href="#" class="nav"><i class="fas fa-angle-left"></i></a><div><?php echo "$month" ?> <span class="year"><?php echo "$year" ?></span></div><a href="#" class="nav"><i class="fas fa-angle-right"></i></a></div>
         <div class="days">
