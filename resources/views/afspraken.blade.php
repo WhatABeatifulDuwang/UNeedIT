@@ -2,12 +2,7 @@
 <x-layout title="Afspraken">
   <section class="afspraken-container">
     <div class="calendar">
-      <?php
-      $month = (new \DateTime())->format('M');
-      $year = (new \DateTime())->format('Y');
-      $days = date("t");
-      ?>
-        <div class="month"><a href="#" class="nav"><i class="fas fa-angle-left"></i></a><div><?php echo "$month" ?> <span class="year"><?php echo "$year" ?></span></div><a href="#" class="nav"><i class="fas fa-angle-right"></i></a></div>
+        <div class="month"><a href="#" class="nav"><i class="fas fa-angle-left"></i></a><div><?php echo (new \DateTime())->format('M') ?> <span class="year"><?php echo (new \DateTime())->format('Y') ?></span></div><a href="#" class="nav"><i class="fas fa-angle-right"></i></a></div>
         <div class="days">
           <span>Mon</span>
           <span>Tue</span>
@@ -20,7 +15,7 @@
         <div class="dates">
           <!-- for loop om de datums aan te maken -->
           <?php
-          for ($d = 1; $d <= $days; $d++) {
+          for ($d = 1; $d <= date("t"); $d++) {
             echo "<button><time>$d</time></button>";
           }
           ?>
