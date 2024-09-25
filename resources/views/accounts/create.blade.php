@@ -16,11 +16,11 @@
         @error('email') {{ $message }} @enderror
         <input type="email" name="email" id="email" value="{{ old('email') }}">
 
-        <label for="password">Password</label>
+        <label for="password">Wachtwoord</label>
         @error('password') {{ $message }} @enderror
         <input type="password" name="password" id="password" value="{{ old('password') }}">
 
-        <label for="confirm_password">Confirm password</label>
+        <label for="confirm_password">Bevestig Wachtwoord</label>
         @error('confirm_password') {{ $message }} @enderror
         <input type="password" name="confirm_password" id="confirm_password" value="{{ old('confirm_password') }}">
 
