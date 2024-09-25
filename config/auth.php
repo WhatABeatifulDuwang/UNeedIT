@@ -62,7 +62,10 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\Account::class,
+            'table' => 'accounts',
+            'email' => 'email',
+            'password' => 'password',
         ],
 
         // 'users' => [
