@@ -4,7 +4,7 @@
         <section class="Uneed-Title">
             <h1 class="cred">ONZE <span class="cblue">SERVICE</span></h1>
         </section>
-        <hr class="line">
+        <hr class="lineR">
         <!-- Lijst van aangeboden diensten -->
         <section class="Service-Align">
             <!-- Graphic Design dienst -->
