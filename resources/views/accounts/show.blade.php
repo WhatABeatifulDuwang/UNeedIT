@@ -19,7 +19,7 @@
     </section>
     <section class="edit-info" style="display: none;">
         <h1>Edit Information</h1>
-        < class="changeForm">
+        <section class="changeForm">
             <form id="changeInfoForm" action="changeinfo.php" method="post" onsubmit="handleFormSubmission()">
                 <label for="newName">New Name:</label><br>
                 <input type="text" id="newName" name="newName" value="<?php echo $user['naam']; ?>"><br>
