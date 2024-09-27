@@ -12,6 +12,8 @@
 
     <!-- Laadt de JS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/js/app.js')
+
+    @vite(['resources/sass/app.scss'])
 </head>
 <body>
     <!-- Navigatiebalk -->
@@ -23,10 +25,9 @@
                 <img src="{{ asset('images/cropped-logo%20UNEED-IT.png') }}" alt="Logo">
             </a>
         </section>
-
-        <!-- Navigatie-opties -->
-        <section id="logoOptions">
-            <ul>
+        <section>
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
                 <!-- Lijst met navigatie-items die linken naar verschillende pagina's -->
                 <li class="redc"><a href="{{ url('/') }}">Home</a></li>
                 <li class="bluec"><a href="{{ url('/overOns') }}">Over ons</a></li>
@@ -37,6 +38,43 @@
                 <li class="redc"><a href="{{ url('/accounts') }}">Account</a></li>
                 <li class="bluec"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+            </ul>
+        </section>
+        <section>
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::Account()->name }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
             </ul>
         </section>
     </nav>

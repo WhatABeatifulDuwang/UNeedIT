@@ -17,17 +17,14 @@ class Account extends Model implements AuthenticatableContract
 
     protected $connection = 'mysql';
     protected $fillable = [
-        'id',
         'first_name',
         'last_name',
         'email',
         'password',
-        'street_name',
-        'street_number',
-        'street_additional',
-        'city',
-        'country',
-        'postal_code',
         'admin'
+    ];
+
+    protected $hidden = [
+        'password',
     ];
 }
