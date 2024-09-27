@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AccountController;
 use App\Http\Controllers\RequestController;
-use App\Models\Account;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,16 +29,17 @@ Route::get('/bezorgdiensten', function () {
 });
 
 Route::resources([
-    'accounts' => AccountController::class,
     'requests' => RequestController::class
 ]);
 
-Route::post('accounts/authenticate', [AccountController::class, 'authenticate'])->withoutMiddleware('auth');
-
 Route::get('/afspraken', function () {
     return view(view: 'afspraken');
-});
+})->middleware('auth');
 
 Route::get('/webshop', function () {
     return view(view: 'webshop');
-});
+})->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
