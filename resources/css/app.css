@@ -634,4 +634,62 @@ hr.line {
 
 }
 
+.registeren-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2vh;
+    
+
+}
+.registeren-page h1{
+    text-align: center;
+}
+
+#first_name{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#last_name{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#confirm_password{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#street_name{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#street_number{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#street_additional{
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#city {
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#country {
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+#postal_code {
+    font-size: 3vh;
+    border-radius: 10px;
+}
+
+
 
