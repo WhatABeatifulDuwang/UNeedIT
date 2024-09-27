@@ -7,7 +7,7 @@
                 <span class="cblue">ONS</span>
             </h1>
         </section>
-        <hr class="line">
+        <hr class="lineR">
         <!-- Hoofdtekst over het bedrijf -->
         <section class="ootext">
             <p class="white-text">

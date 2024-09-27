@@ -6,7 +6,7 @@
                     <span class="cblue">Neem contact met ons op!</span>
                 </h1>
             </section>
-            <hr class="line">
+            <hr class="lineR">
             <section>
                 <!-- Contactgegevens -->
                 <ul>
@@ -15,6 +15,12 @@
                     <li><strong>Twitter:</strong><a href="https://twitter.com/johnsips/">Uneed-IT</a></li>
                 </ul>
             </section>
+            <section class="Uneed-Title">
+                <h1>
+                    <span class="cred">Vind onze bedrijf!</span>
+                </h1>
+            </section>
+            <hr class="lineB">
             <section class="iframe">
                 <!-- Google Maps iframe voor locatie -->
                 <section class="location">
