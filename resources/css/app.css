@@ -28,7 +28,6 @@ body {
 }
 
 .Uneed-Title {
-    display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
