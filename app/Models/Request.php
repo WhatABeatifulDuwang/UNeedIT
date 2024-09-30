@@ -9,6 +9,7 @@ class Request extends Model
 {
     use HasFactory;
 
+    protected $connection = 'mysql';
     protected $fillable = [
         'id',
         'device_name',

@@ -7,21 +7,24 @@ body {
 
 .main-content {
     font-size: 4vh;
-    color: red;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding-top: 160px;
+    height: 700px;
+    min-height: 2vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/public/images/uneeditcont.jpg");
+    background-image: url("/public/images/40gp-uneedit5.jpg");
+    z-index: -1;
 }
 
-.main-page {
-    background-image: url("/public/images/40gp-uneedit5.jpg");
+.secondary-content {
+    width: auto;
+    height: 100vh;
+    border: dotted black 2px;
+    margin-top: 1px;
 }
 
 .Uneed-Title {
@@ -30,6 +33,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
+
 .cred {
     color: red;
     font-size: 4vh;
@@ -40,6 +44,16 @@ body {
     color: mediumturquoise;
     font-size: 4vh;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+hr.lineR {
+    border: 1px red solid;
+    width: 50%;
+}
+
+hr.lineB {
+    border: 1px blue solid;
+    width: 50%;
 }
 
 /* Over Ons Page*/
@@ -56,7 +70,7 @@ body {
     background-image: url("/public/images/uneedi01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
 }
 
 .ootext {
@@ -78,6 +92,9 @@ body {
 
 .Service-Container {
     background-image: url("/public/images/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -181,13 +198,11 @@ body {
 
 /* Bezorgdiensten Page*/
 
-hr.line {
-    border: 1px red solid;
-    width: 50%;
-}
-
 .bezorgdiensten-container {
     background-image: url("/public/images/back.jpg"); /* Placeholder Img */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     display: grid;
     justify-content: center;
@@ -229,6 +244,9 @@ hr.line {
 
 .faq-page-container {
     background-image: url("/public/images/back.jpg"); /* Placeholder Img */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -268,6 +286,20 @@ hr.line {
 }
 
 /* Contact Page */
+
+.main-contact-content {
+    font-size: 4vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("/public/images/uneeditcont.jpg");
+}
 
 .contact-content {
     text-shadow: rgba(51, 51, 51, 0.95) 2px 0 10px;
@@ -332,7 +364,7 @@ hr.line {
     margin-left: 20px;
     padding: 0;
     display: flex;
-
+    flex-direction: row;
 }
 
 #navbar ul li {
@@ -375,7 +407,7 @@ hr.line {
     border-radius: 13px;
 }
 
-.homeText img { 
+.homeText img {
     width: 20vw;
     margin-top: 7px;
 
@@ -577,3 +609,22 @@ hr.line {
         }
     }
 }
+
+/*Account page */
+
+.container {
+    height: 100dvh  ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-image: url("/public/images/uneeditcont.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200vh;
+}
+
+.bottom {
+    color: #eee;
+}
+
+

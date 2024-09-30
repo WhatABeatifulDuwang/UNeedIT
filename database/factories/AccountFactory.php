@@ -24,12 +24,6 @@ class AccountFactory extends Factory
             'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
             'password' => static::$password ??= Hash::make('password'),
-            'street_name' => fake()->streetName(),
-            'street_number' => fake()->buildingNumber(),
-            'street_additional' => null,
-            'city' => fake()->city(),
-            'country' => fake()->country(),
-            'postal_code' => $this->faker->postcode(),
         ];
     }
 }
