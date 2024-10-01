@@ -10,9 +10,10 @@
     <!-- Laadt de CSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/css/app.css')
 
-    <!-- Laadt de JS-bestanden, gebundeld en gecompileerd door Vite -->
-    @vite('resources/js/app.js')
+    <!-- Laadt de JS-bestanden -->
+    <script src="resources/js/app.js"></script>
 
+    <!-- Laadt de SCSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite(['resources/sass/app.scss'])
 </head>
 <body>

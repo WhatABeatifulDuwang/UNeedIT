@@ -19,12 +19,4 @@
             <section id="result"></section>
         </section>
     </section>
-
-    <!-- Script dat de keuze van de gebruiker weergeeft -->
-    <script>
-        function selectBezorgdienst(bezorgdienst) {
-            document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
-        }
-    </script>
-
 </x-layout>

@@ -27,18 +27,12 @@
         <!-- for loop om de datums aan te maken -->
         <?php
         for ($d = 1; $d <= date("t"); $d++) {
-          echo "<button onclick='calanderbutton($d)'><time>$d</time></button>";
+          echo "<button onclick='calenderbutton($d)'><time>$d</time></button>";
         }
         ?>
-        <script>
-          function calanderbutton(day) {
-            document.getElementsByClassName('calanderAppointment')[0].style.display = 'block';
-            console.log(day);
-          }
-        </script>
       </section>
     </section>
-    <section class="calanderAppointment">
+    <section class="calenderAppointment">
       <form>
         <input placeholder="Device type"></input>
         <input placeholder="Description"></input>
