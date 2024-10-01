@@ -1,5 +1,5 @@
-<x-layout title="Home" id="Uneed-bg">
-    <section class="main-content">
+<x-layout title="Home">
+    <section class="main-content" id="Uneed-bg">
         <section class="homeText">
             <!-- Logo van UNEED-IT -->
                 <img src="{{ asset('images/cropped-logo UNEED-IT(notext).png') }}" alt="UNEED-IT Logo">
@@ -11,23 +11,23 @@
     <div class="secondary-content">
         <section class="Uneed-Title">
             <h1>Iets komt hier beneden</h1>
-            <h1>Iets komt hier beneden</h1>
-        </section></div>
-
+            <h1>Iets komt hier ook beneden</h1>
+        </section>
+    </div>
 
     <script>
         let container = document.getElementById("Uneed-bg");
         let windowHeight = window.innerHeight;
         let windowWidth = window.innerWidth;
         let scrollArea = 1000 - windowHeight;
-        let square1 = document.getElementsByClassName("homeText")[0];
+        let uNeed = document.getElementsByClassName("homeText")[0];
 
         // Beweegt de locatie van de achtergrond als er gescrolled wordt.
         window.addEventListener('scroll', function() {
             let scrollTop = window.pageYOffset || window.scrollTop;
-            let scrollPercent = scrollTop/scrollArea || 0;
+            let scrollPercent = scrollTop*scrollArea || 0;
 
-            square1.style.bottom = scrollPercent*window.innerHeight + 'px';
+            uNeed.style.bottom = scrollPercent/window.innerHeight + 'px';
         });
     </script>
 
