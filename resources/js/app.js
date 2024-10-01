@@ -5,7 +5,8 @@ function selectBezorgdienst(bezorgdienst) {
 }
 
 function calanderbutton(day) {
-    alert(day);
-  }
+  document.getElementsByClassName('calanderAppointment')[0].style.display = 'block';
+  console.log(day);
+}
 
 console.log("js loaded");

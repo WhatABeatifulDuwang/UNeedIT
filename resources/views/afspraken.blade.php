@@ -7,8 +7,8 @@
           <i class="fas fa-angle-left"></i>
         </a>
         <section>
-          <?php echo (new \DateTime())->format('M') ?>
-          <span class="year"><?php echo (new \DateTime())->format('Y') ?></span>
+          <?php echo date('M') ?>
+          <span class="year"><?php echo date("Y") ?></span>
         </section>
         <a href="#" class="nav">
           <i class="fas fa-angle-right"></i>
@@ -33,7 +33,7 @@
         <script>
           function calanderbutton(day) {
             document.getElementsByClassName('calanderAppointment')[0].style.display = 'block';
-            alert(day);
+            console.log(day);
           }
         </script>
       </section>
