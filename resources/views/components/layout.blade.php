@@ -10,7 +10,7 @@
     <!-- Laadt de CSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/css/app.css')
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <!-- Laadt de JS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite('resources/js/app.js')
 
     @vite(['resources/sass/app.scss'])
@@ -35,8 +35,8 @@
                 <li class="bluec"><a href="{{ url('/bezorgdiensten') }}">Bezorgdiensten</a></li>
                 <li class="redc"><a href="{{ url('/faq') }}">FAQ</a></li>
                 <li class="bluec"><a href="{{ url('/contact') }}">Contact</a></li>
-                <li class="bluec"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
-                <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
+                <li class="redc"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
+                <li class="bluec"><a href="{{ url('/webshop') }}">Webshop</a></li>
             </ul>
         </section>
         <section>

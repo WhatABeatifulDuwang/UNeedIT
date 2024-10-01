@@ -378,7 +378,7 @@ hr.lineB {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2vh;
-    color: #fff;
+    color: red;
 }
 
 #navbar ul li.redc a {
@@ -390,7 +390,7 @@ hr.lineB {
 }
 
 #navbar ul li a:hover {
-    color: #ffd700;
+    color: mediumturquoise;
 }
 
 .homeText {
