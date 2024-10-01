@@ -1,5 +1,5 @@
 <x-layout title="Contact">
-    <section class="main-content">
+    <section class="main-contact-content">
         <section class="contact-content">
             <section class="Uneed-Title">
                 <h1>

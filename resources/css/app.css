@@ -5,53 +5,29 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    width: 100%;
-    height: 1000px;
-}
-
-.square {
-    position: absolute;
-}
-
-.square-1 {
-    width: 100px;
-    height: 100px;
-    background: red;
-    top: 600px;
-}
-
-.square-2 {
-    width: 120px;
-    height: 120px;
-    background: black;
-    left: 800px;
-    top: 800px;
-}
-
 .main-content {
     font-size: 4vh;
-    color: red;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1000px;
-    max-height: 100vh;
+    height: 700px;
+    min-height: 2vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("/public/images/uneeditcont.jpg");
-    bottom: 100px;
+    background-image: url("/public/images/40gp-uneedit5.jpg");
     z-index: -1;
 }
 
-.main-page {
-    background-image: url("/public/images/40gp-uneedit5.jpg");
+.secondary-content {
+    width: auto;
+    height: 100vh;
+    border: dotted black 2px;
+    margin-top: 1px;
 }
 
 .Uneed-Title {
-    display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -309,6 +285,20 @@ hr.lineB {
 }
 
 /* Contact Page */
+
+.main-contact-content {
+    font-size: 4vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000px;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("/public/images/uneeditcont.jpg");
+}
 
 .contact-content {
     text-shadow: rgba(51, 51, 51, 0.95) 2px 0 10px;
