@@ -35,7 +35,6 @@
                 <li class="bluec"><a href="{{ url('/bezorgdiensten') }}">Bezorgdiensten</a></li>
                 <li class="redc"><a href="{{ url('/faq') }}">FAQ</a></li>
                 <li class="bluec"><a href="{{ url('/contact') }}">Contact</a></li>
-                <li class="redc"><a href="{{ url('/accounts') }}">Account</a></li>
                 <li class="bluec"><a href="{{ url('/afspraken') }}">Afspraken</a></li>
                 <li class="redc"><a href="{{ url('/webshop') }}">Webshop</a></li>
             </ul>
@@ -59,7 +58,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::Account()->name }}
+                            {{ Auth::User()->first_name }} {{ Auth::User()->last_name }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
