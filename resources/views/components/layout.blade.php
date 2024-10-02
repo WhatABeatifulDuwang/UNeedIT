@@ -13,6 +13,8 @@
     <!-- Laadt de JS-bestanden -->
     <script src="resources/js/app.js"></script>
 
+    @vite('resources/js/app.js')
+
     <!-- Laadt de SCSS-bestanden, gebundeld en gecompileerd door Vite -->
     @vite(['resources/sass/app.scss'])
 </head>

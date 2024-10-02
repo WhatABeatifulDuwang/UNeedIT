@@ -40,12 +40,4 @@
                 </section>
             </section>
         </section>
-
-        <!-- Script voor het tonen/verbergen van antwoorden -->
-        <script>
-            function toggleAnswer(id) {
-                var answer = document.getElementById('answer' + id);
-                answer.classList.toggle('show');
-            }
-        </script>
 </x-layout>

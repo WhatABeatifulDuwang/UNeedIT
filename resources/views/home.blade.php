@@ -14,21 +14,4 @@
             <h1>Iets komt hier ook beneden</h1>
         </section>
     </div>
-
-    <script>
-        let container = document.getElementById("Uneed-bg");
-        let windowHeight = window.innerHeight;
-        let windowWidth = window.innerWidth;
-        let scrollArea = 1000 - windowHeight;
-        let uNeed = document.getElementsByClassName("homeText")[0];
-
-        // Beweegt de locatie van de achtergrond als er gescrolled wordt.
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || window.scrollTop;
-            let scrollPercent = scrollTop*scrollArea || 0;
-
-            uNeed.style.bottom = scrollPercent/window.innerHeight + 'px';
-        });
-    </script>
-
 </x-layout>
