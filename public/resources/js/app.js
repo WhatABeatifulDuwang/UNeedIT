@@ -4,9 +4,14 @@ function selectBezorgdienst(bezorgdienst) {
 }
 
 // Afspraken pagina
-function calenderbutton(day) {
+function calenderbutton(dateString) {
+  document.getElementById('selectedDate').textContent = dateString;
   document.getElementsByClassName('calenderAppointment')[0].style.display = 'block';
-  console.log(day);
+  console.log(dateString);
+}
+
+function hideCalendarAppointment() {
+  document.getElementsByClassName('calenderAppointment')[0].style.display = 'none';
 }
 
 // Faq pagina
