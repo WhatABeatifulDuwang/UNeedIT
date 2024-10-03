@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RequestController;
+use App\Http\Controllers\AppointmentController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +29,7 @@ Route::get('/bezorgdiensten', function () {
 });
 
 Route::resources([
-    'requests' => RequestController::class
+    'requests' => AppointmentController::class
 ]);
 
 Route::get('/afspraken', function () {
