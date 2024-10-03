@@ -363,7 +363,7 @@ hr.lineB {
                     color: mediumturquoise;
                 }
             }
-            
+
             &.redc a {
                 color: red;
             }
@@ -548,7 +548,7 @@ hr.lineB {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         gap: 25px;
-        
+
         button {
             color: rgb(220, 21, 21);
             cursor: pointer;
@@ -620,4 +620,16 @@ hr.lineB {
             border-radius: 10px;
         }
     }
+    .card{
+        font-size: 2vh;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        text-align: 3vh;
+        width: 25vw ;
+    }
 }
+
+
+
+
+
