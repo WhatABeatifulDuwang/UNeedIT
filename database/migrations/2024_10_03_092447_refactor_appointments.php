@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('appointments', function (Blueprint $table) {
-            $table->date("date");
+            $table->date("appointment_date");
             $table->time('appointment_time')->change();
         });
     }
