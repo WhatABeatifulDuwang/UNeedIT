@@ -4,12 +4,11 @@ namespace Database\Factories;
 
 use App\Models\Account;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\Sequence;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Request>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Appointment>
  */
-class RequestFactory extends Factory
+class AppointmentFactory extends Factory
 {
     /**
      * Define the model's default state.

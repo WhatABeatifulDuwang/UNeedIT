@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Request;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Appointment;
 use Illuminate\Database\Eloquent\Factories\Sequence;
 use Illuminate\Database\Seeder;
 
-class RequestSeeder extends Seeder
+class AppointmentSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +15,7 @@ class RequestSeeder extends Seeder
      */
     public function run()
     {
-        Request::factory()
+        Appointment::factory()
             ->count(20)
             ->state(new Sequence(
                 ['device_name' => 'iPhone'],

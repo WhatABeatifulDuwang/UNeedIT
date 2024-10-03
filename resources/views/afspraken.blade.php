@@ -15,25 +15,23 @@
         </a>
       </section>
       <section class="days">
-        <span>Mon</span>
-        <span>Tue</span>
-        <span>Wed</span>
-        <span>Thu</span>
-        <span>Fri</span>
-        <span>Sat</span>
-        <span>Sun</span>
+        <span>Ma</span>
+        <span>Di</span>
+        <span>Wo</span>
+        <span>Do</span>
+        <span>Vr</span>
+        <span>Za</span>
+        <span>Zo</span>
       </section>
       <section class="dates">
         <?php
         // Get the current month and year
-        $currentMonth = date("n"); // Numeric representation of a month, without leading zeros
-        $currentYear = date("Y"); // Current year
-        $daysInMonth = date("t"); // Total number of days in the month
+        $currentMonth = date("n");
+        $currentYear = date("Y");
+        $daysInMonth = date("t"); 
 
-        // Get the first day of the month (1 = Monday, 7 = Sunday)
         $firstDayOfMonth = date("N", strtotime("$currentYear-$currentMonth-01")); 
 
-        // Create empty spans for days before the first of the month
         for ($i = 1; $i < $firstDayOfMonth; $i++) {
           echo "<span></span>"; // Empty space for alignment
         }
@@ -41,7 +39,7 @@
         // Loop through the days of the month
         for ($d = 1; $d <= $daysInMonth; $d++) {
           // Create a formatted date string
-          $dateString = date("F j, Y", strtotime("$currentYear-$currentMonth-$d")); // Format: "Month Day, Year"
+          $dateString = date("F j, Y", strtotime("$currentYear-$currentMonth-$d"));
           
           // Check if the date matches the current date
           $isToday = ($d == date("j")) ? 'today' : '';
@@ -51,13 +49,14 @@
       </section>
     </section>
     <section class="calenderAppointment">
-      <h2>Selected Date: <span id="selectedDate"></span></h2> <!-- Spot to show the clicked date -->
+      <h2>Geselecteerde Datum: <span id="selectedDate"></span></h2>
       <form>
-        <input placeholder="Device type"></input>
-        <input placeholder="Description"></input>
-        <input type="submit" value="Submit">
+        <input placeholder="Apparaat type"></input>
+        <input placeholder="Omschrijving"></input>
+        <input placeholder="Tijd"></input>
+        <input type="submit" value="Afspraak maken">
       </form>
-      <button onclick="hideCalendarAppointment()">Hide</button> <!-- Hide button -->
+      <button onclick="hideCalendarAppointment()">X</button>
     </section>
   </section>
 </x-layout>
