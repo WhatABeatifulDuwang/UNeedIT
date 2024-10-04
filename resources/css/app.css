@@ -358,18 +358,20 @@ hr.lineB {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 2vh;
                 color: red;
+            }
 
+            &.redc a {
+                color: red;
                 &:hover {
                     color: mediumturquoise;
                 }
             }
 
-            &.redc a {
-                color: red;
-            }
-
             &.bluec a {
                 color: mediumturquoise;
+                &:hover {
+                    color: red;
+                }
             }
         }
     }
