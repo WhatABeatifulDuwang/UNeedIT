@@ -32,13 +32,14 @@ Route::resources([
     'requests' => AppointmentController::class
 ]);
 
-Route::get('/afspraken', function () {
-    return view(view: 'afspraken');
-})->middleware('auth');
-
-Route::get('/webshop', function () {
-    return view(view: 'webshop');
-})->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/afspraken', function () {
+        return view(view: 'afspraken');
+    }) ;
+     Route::get('/webshop', function () {
+         return view(view: 'webshop');
+     });
+ });
 
 Auth::routes();
 
