@@ -28,9 +28,9 @@
         // Get the current month and year
         $currentMonth = date("n");
         $currentYear = date("Y");
-        $daysInMonth = date("t"); 
+        $daysInMonth = date("t");
 
-        $firstDayOfMonth = date("N", strtotime("$currentYear-$currentMonth-01")); 
+        $firstDayOfMonth = date("N", strtotime("$currentYear-$currentMonth-01"));
 
         for ($i = 1; $i < $firstDayOfMonth; $i++) {
           echo "<span></span>"; // Empty space for alignment
@@ -40,7 +40,7 @@
         for ($d = 1; $d <= $daysInMonth; $d++) {
           // Create a formatted date string
           $dateString = date("F j, Y", strtotime("$currentYear-$currentMonth-$d"));
-          
+
           // Check if the date matches the current date
           $isToday = ($d == date("j")) ? 'today' : '';
           echo "<button class='$isToday' onclick='calenderbutton(\"$dateString\")'><time>$d</time></button>";
@@ -49,14 +49,24 @@
       </section>
     </section>
     <section class="calenderAppointment">
+        <button onclick="hideCalendarAppointment()">X</button>
       <h2>Geselecteerde Datum: <span id="selectedDate"></span></h2>
       <form>
-        <input placeholder="Apparaat type"></input>
+        Kies uw apparaat:
+        <select name="Apparaat Type" id="type">
+        <optgroup label="Apparaat Type">
+            <option value="" selected disabled hidden>Kies hier...</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Telefoon">Telefoon</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Overig">Overig</option>
+        <input placeholder="Apparaat naam"></input>
         <input placeholder="Omschrijving"></input>
         <input placeholder="Tijd"></input>
+
         <input type="submit" value="Afspraak maken">
       </form>
-      <button onclick="hideCalendarAppointment()">X</button>
     </section>
   </section>
 </x-layout>
