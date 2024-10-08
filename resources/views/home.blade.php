@@ -10,8 +10,8 @@
     </section>
     <div class="secondary-content">
         <section class="Uneed-Title">
-            <h1>Iets komt hier beneden</h1>
-            <h1>Iets komt hier ook beneden</h1>
+            <h1>Welkom bij Uneed-IT!</h1>
+            <hr class="lineRed">
         </section>
     </div>
 </x-layout>

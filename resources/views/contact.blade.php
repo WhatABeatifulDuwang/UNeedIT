@@ -6,13 +6,13 @@
                     <span class="cblue">Neem contact met ons op!</span>
                 </h1>
             </section>
-            <hr class="lineR">
+            <hr class="lineRed">
             <section>
                 <!-- Contactgegevens -->
                 <ul>
-                    <li><strong>Email:</strong><a href="mailto:info@uneed-it.com">info@uneed-it.com</a></li>
-                    <li><strong>Facebook:</strong><a href="https://www.facebook.com/ikmaakhetwel.nl/">Uneed-IT</a></li>
-                    <li><strong>Twitter:</strong><a href="https://twitter.com/johnsips/">Uneed-IT</a></li>
+                    <li><strong>Email: </strong><a href="mailto:info@uneed-it.com">info@uneed-it.com</a></li>
+                    <li><strong>Facebook: </strong><a href="https://www.facebook.com/ikmaakhetwel.nl/">Uneed-IT</a></li>
+                    <li><strong>Twitter: </strong><a href="https://twitter.com/johnsips/">Uneed-IT</a></li>
                 </ul>
             </section>
             <section class="Uneed-Title">
@@ -20,7 +20,7 @@
                     <span class="cred">Vind onze bedrijf!</span>
                 </h1>
             </section>
-            <hr class="lineB">
+            <hr class="lineBlue">
             <section class="iframe">
                 <!-- Google Maps iframe voor locatie -->
                 <section class="location">

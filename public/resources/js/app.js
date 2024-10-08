@@ -1,6 +1,7 @@
 // Bezorgdiesnten pagina
 function selectBezorgdienst(bezorgdienst) {
     document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
+    console.log(`${bezorgdienst} is gekozen.`);
 }
 
 // Afspraken pagina
@@ -16,7 +17,7 @@ function hideCalendarAppointment() {
 
 // Faq pagina
 function toggleAnswer(id) {
-  var answer = document.getElementById('answer' + id);
+  let answer = document.getElementById('answer' + id);
   answer.classList.toggle('show');
 }
 

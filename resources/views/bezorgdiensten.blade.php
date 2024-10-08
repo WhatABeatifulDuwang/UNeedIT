@@ -6,7 +6,7 @@
                     <span class="cred">BEZORGDIENSTEN</span>
                 </h1>
             </section>
-            <hr class="lineR">
+            <hr class="lineRed">
             <p class="textbezorg">Als gebruiker wil ik informatie zien over bezorgdiensten zoals UPS, DHL, Homerr, zodat ik kan kiezen voor ophalen en verzenden.</p>
             <p class="textbezorg">Kies een bezorgdienst:</p>
             <ul class="bezordienstenlc">
