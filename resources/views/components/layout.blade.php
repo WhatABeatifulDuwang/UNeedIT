@@ -89,10 +89,14 @@
     <!-- Footer sectie -->
     <footer id="footer">
         <!-- Adressectie met locatie-icoon -->
-        <section id="address">
+        <section id="address" >
             <img src="{{ asset('images/location.png') }}" alt="Location Icon">
-            <p>Zuidbaan 514, 2841MD</p>
-            <p>Moordrecht</p>
+            <div class="Uneed-Location" onclick="openInNewTab('https://maps.app.goo.gl/R4cvgHj6DkHjh4aC6');">
+                <p>Zuidbaan 514, 2841MD
+                    <br>
+                Moordrecht</p>
+            </div>
+
         </section>
 
         <!-- Telefoonnummersectie met telefoonicoon -->

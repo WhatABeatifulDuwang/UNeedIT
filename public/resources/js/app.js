@@ -21,4 +21,9 @@ function toggleAnswer(id) {
   answer.classList.toggle('show');
 }
 
+// Footer
+function openInNewTab(url) {
+    window.open(url, '_blank').focus();
+}
+
 console.log("js loaded");

@@ -474,6 +474,14 @@ hr.lineGold {
             font-weight: bold;
         }
 
+        .Uneed-Location {
+            cursor: pointer;
+
+            p:hover {
+                color: #ffd700;
+            }
+        }
+
         a {
             color: #fff;
 
