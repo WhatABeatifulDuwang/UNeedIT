@@ -3,6 +3,7 @@ body {
     padding-bottom: 100px;
     position: relative;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* Home page */
@@ -23,10 +24,13 @@ body {
 }
 
 .secondary-content {
-    width: auto;
     height: 100vh;
-    border: dotted black 2px;
-    margin-top: 1px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
 }
 
 .homeText {
@@ -40,7 +44,8 @@ body {
     height: 20vh;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 13px;
-    transition: top 0.4s ease;
+    transition: top 0.5s ease;
+    z-index: 0;
 
     img {
         width: 20vw;

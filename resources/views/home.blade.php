@@ -8,10 +8,10 @@
                <span class="red-text">Uneed-</span><span class="blue-text">IT</span></p>
         </section>
     </section>
-    <div class="secondary-content">
+    <section class="secondary-content">
         <section class="Uneed-Title">
             <h1>Welkom bij Uneed-IT!</h1>
             <hr class="lineRed">
         </section>
-    </div>
+    </section>
 </x-layout>
