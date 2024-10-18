@@ -457,16 +457,15 @@ hr.lineGold {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
     z-index: 999;
     transition-duration: 0.300s;
 
     &:hover {
-        height: 12vh;
+        height: 14vh;
     }
 
     section {
-        flex-grow: 1;
 
         p {
             margin: 0;
