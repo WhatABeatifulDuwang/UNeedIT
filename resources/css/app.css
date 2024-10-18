@@ -35,15 +35,15 @@ body {
 .homeText {
     position: absolute;
     top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
     text-align: center;
     background-color: rgba(51, 51, 51, 0.95);
     width: 25vw;
     height: 20vh;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 13px;
-    transition: top 0.5s ease;
+    transition: top 0.2s;
+    user-select: none;
     z-index: 0;
 
     img {
@@ -58,6 +58,7 @@ body {
 
     .white-text {
         color: white;
+        font-size: 3vh;
     }
 
     .blue-text {
@@ -347,22 +348,29 @@ hr.lineGold {
         justify-content: space-between;
         align-items: center;
 
-        ul {
+        ul.link-box {
             list-style: none;
             display: flex;
             flex-direction: row;
             justify-content: center;
+            border: solid 1px black;
+            border-radius: 13px;
+            background-color: rgba(51, 51, 51, 0.95);
 
             li {
                 padding: 20px;
                 font-size: 20px;
+                color: white;
+                user-select: none;
 
                 a {
                     color: blue;
                     text-decoration: none;
+                    cursor: pointer;
 
                     &:hover {
                         color: #ffd700;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -385,6 +393,7 @@ hr.lineGold {
     padding: 10px 20px;
     width: 100%;
     z-index: 1000;
+    user-select: none;
 
     #logoNav img {
         height: 80px;
@@ -456,12 +465,20 @@ hr.lineGold {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 14vh;
+    font-size: 1.7vh;
     z-index: 999;
-    transition-duration: 0.300s;
+    transition-duration: 0.3s;
+    user-select: none;
 
     &:hover {
-        height: 14vh;
+        height: 15vh;
+        font-size: 1.8vh;
+
+        img {
+            width: 50px;
+            transition-duration: 0.35s;
+        }
     }
 
     section {
@@ -489,7 +506,7 @@ hr.lineGold {
         }
 
         img {
-            width: 50px;
+            width: 40px;
             height: auto;
             margin-right: 10px;
         }

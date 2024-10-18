@@ -9,10 +9,10 @@
             <hr class="lineRed">
             <section>
                 <!-- Contactgegevens -->
-                <ul>
-                    <li><strong>Email: </strong><a href="mailto:info@uneed-it.com">info@uneed-it.com</a></li>
-                    <li><strong>Facebook: </strong><a href="https://www.facebook.com/ikmaakhetwel.nl/">Uneed-IT</a></li>
-                    <li><strong>Twitter: </strong><a href="https://twitter.com/johnsips/">Uneed-IT</a></li>
+                <ul class="link-box">
+                    <li><strong>Email: </strong><a onclick="openInNewTab('mailto:info@uneed-it.com');">info@uneed-it.com</a></li>
+                    <li><strong>Facebook: </strong><a onclick="openInNewTab('https://www.facebook.com/ikmaakhetwel.nl/');">Uneed-IT</a></li>
+                    <li ><strong>Twitter: </strong><a onclick="openInNewTab('https://twitter.com/johnsips/');">Uneed-IT</a></li>
                 </ul>
             </section>
             <section class="Uneed-Title">
