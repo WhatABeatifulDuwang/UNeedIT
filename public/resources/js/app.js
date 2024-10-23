@@ -1,10 +1,14 @@
 // Bezorgdiesnten pagina
 function selectBezorgdienst(bezorgdienst) {
-    document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
-    console.log(`${bezorgdienst} is gekozen.`);
+  document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
+  console.log(`${bezorgdienst} is gekozen.`);
 }
 
 // Afspraken pagina
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementsByClassName('calenderAppointment')[0].style.display = 'none';
+});
+
 function calenderbutton(dateString) {
   document.getElementById('selectedDate').textContent = dateString;
   document.getElementsByClassName('calenderAppointment')[0].style.display = 'block';
@@ -12,10 +16,10 @@ function calenderbutton(dateString) {
   // Zet de datum in het juiste formaat in het invoerveld
   const selectedDate = new Date(dateString);
   selectedDate.setDate(selectedDate.getDate() + 1); // Voeg één dag toe
-  
+
   const formattedDate = selectedDate.toISOString().split('T')[0];
   document.getElementById('appointment_date').value = formattedDate; // Voeg deze regel toe
-  
+
   console.log(formattedDate);
 }
 
@@ -31,7 +35,7 @@ function toggleAnswer(id) {
 
 // Footer
 function openInNewTab(url) {
-    window.open(url, '_blank').focus();
+  window.open(url, '_blank').focus();
 }
 
 console.log("js loaded");

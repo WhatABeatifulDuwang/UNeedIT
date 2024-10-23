@@ -1,16 +1,28 @@
-<!-- Gebruikt de layout component en geeft de paginatitel 'Afspraken' door -->
+<?php
+// Verkrijg de huidige maand en jaar uit de queryparameters of gebruik de huidige datum
+$currentMonth = isset($_GET['month']) ? (int)$_GET['month'] : date('n');
+$currentYear = isset($_GET['year']) ? (int)$_GET['year'] : date('Y');
+
+// Bereken het aantal dagen in de huidige maand
+$daysInMonth = cal_days_in_month(CAL_GREGORIAN, $currentMonth, $currentYear);
+
+// Bepaal de eerste dag van de maand
+$firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
+?>
+
+<!-- Gebruikt de layout component en geeft de paginatitel 'Afspraken' door --> 
 <x-layout title="Afspraken">
     <section class="afspraken-container">
         <section class="calendar">
             <section class="month">
-                <a href="#" class="nav">
+                <a href="?month=<?php echo ($currentMonth - 1 <= 0) ? 12 : $currentMonth - 1; ?>&year=<?php echo ($currentMonth - 1 <= 0) ? $currentYear - 1 : $currentYear; ?>" class="nav">
                     <i class="fas fa-angle-left"><</i>
                 </a>
                 <section>
-                    <?php echo date('F'); ?>
-                    <span class="year"><?php echo date('Y'); ?></span>
+                    <?php echo date('F', strtotime("$currentYear-$currentMonth-01")); ?>
+                    <span class="year"><?php echo $currentYear; ?></span>
                 </section>
-                <a href="#" class="nav">
+                <a href="?month=<?php echo ($currentMonth + 1 > 12) ? 1 : $currentMonth + 1; ?>&year=<?php echo ($currentMonth + 1 > 12) ? $currentYear + 1 : $currentYear; ?>" class="nav">
                     <i class="fas fa-angle-right">></i>
                 </a>
             </section>
@@ -25,23 +37,17 @@
             </section>
             <section class="dates">
                 <?php
-                // Get the current month and year
-                $currentMonth = date('n');
-                $currentYear = date('Y');
-                $daysInMonth = date('t');
-                
-                $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
-                
+
                 for ($i = 1; $i < $firstDayOfMonth; $i++) {
-                    echo '<span></span>'; // Empty space for alignment
+                    echo '<span></span>'; // Lege ruimte voor uitlijning
                 }
-                
-                // Loop through the days of the month
+
+                // Loop door de dagen van de maand
                 for ($d = 1; $d <= $daysInMonth; $d++) {
-                    // Create a formatted date string
+                    // Maak een geformatteerde datumstring
                     $dateString = date('F j, Y', strtotime("$currentYear-$currentMonth-$d"));
-                
-                    // Check if the date matches the current date
+
+                    // Controleer of de datum de huidige datum is
                     $isToday = $d == date('j') ? 'today' : '';
                     echo "<button class='$isToday' onclick='calenderbutton(\"$dateString\")'><time>$d</time></button>";
                 }
