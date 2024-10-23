@@ -1,7 +1,7 @@
 <?php
 // Verkrijg de huidige maand en jaar uit de queryparameters of gebruik de huidige datum
-$currentMonth = isset($_GET['month']) ? (int)$_GET['month'] : date('n');
-$currentYear = isset($_GET['year']) ? (int)$_GET['year'] : date('Y');
+$currentMonth = isset($_GET['month']) ? (int) $_GET['month'] : date('n');
+$currentYear = isset($_GET['year']) ? (int) $_GET['year'] : date('Y');
 
 // Bereken het aantal dagen in de huidige maand
 $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $currentMonth, $currentYear);
@@ -10,19 +10,25 @@ $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $currentMonth, $currentYear);
 $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
 ?>
 
-<!-- Gebruikt de layout component en geeft de paginatitel 'Afspraken' door --> 
+<!-- Gebruikt de layout component en geeft de paginatitel 'Afspraken' door -->
 <x-layout title="Afspraken">
     <section class="afspraken-container">
         <section class="calendar">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <section class="month">
-                <a href="?month=<?php echo ($currentMonth - 1 <= 0) ? 12 : $currentMonth - 1; ?>&year=<?php echo ($currentMonth - 1 <= 0) ? $currentYear - 1 : $currentYear; ?>" class="nav">
-                    <i class="fas fa-angle-left"><</i>
+                <a href="?month=<?php echo $currentMonth - 1 <= 0 ? 12 : $currentMonth - 1; ?>&year=<?php echo $currentMonth - 1 <= 0 ? $currentYear - 1 : $currentYear; ?>" class="nav">
+                    <i class="fas fa-angle-left">
+                        << /i>
                 </a>
                 <section>
                     <?php echo date('F', strtotime("$currentYear-$currentMonth-01")); ?>
                     <span class="year"><?php echo $currentYear; ?></span>
                 </section>
-                <a href="?month=<?php echo ($currentMonth + 1 > 12) ? 1 : $currentMonth + 1; ?>&year=<?php echo ($currentMonth + 1 > 12) ? $currentYear + 1 : $currentYear; ?>" class="nav">
+                <a href="?month=<?php echo $currentMonth + 1 > 12 ? 1 : $currentMonth + 1; ?>&year=<?php echo $currentMonth + 1 > 12 ? $currentYear + 1 : $currentYear; ?>" class="nav">
                     <i class="fas fa-angle-right">></i>
                 </a>
             </section>
@@ -37,16 +43,16 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
             </section>
             <section class="dates">
                 <?php
-
+                
                 for ($i = 1; $i < $firstDayOfMonth; $i++) {
                     echo '<span></span>'; // Lege ruimte voor uitlijning
                 }
-
+                
                 // Loop door de dagen van de maand
                 for ($d = 1; $d <= $daysInMonth; $d++) {
                     // Maak een geformatteerde datumstring
                     $dateString = date('F j, Y', strtotime("$currentYear-$currentMonth-$d"));
-
+                
                     // Controleer of de datum de huidige datum is
                     $isToday = $d == date('j') ? 'today' : '';
                     echo "<button class='$isToday' onclick='calenderbutton(\"$dateString\")'><time>$d</time></button>";
@@ -59,12 +65,6 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
             <h2>Geselecteerde Datum: <span id="selectedDate"></span></h2>
             <form action="{{ route('appointments.store') }}" method="POST">
                 @csrf
-                @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
-
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
