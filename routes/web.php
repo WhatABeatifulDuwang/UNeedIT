@@ -28,18 +28,16 @@ Route::get('/bezorgdiensten', function () {
     return view('bezorgdiensten');
 });
 
-Route::resources([
-    'requests' => AppointmentController::class
-]);
+Route::resource('appointments', AppointmentController::class);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/afspraken', function () {
-        return view(view: 'afspraken');
-    }) ;
-     Route::get('/webshop', function () {
-         return view(view: 'webshop');
-     });
- });
+        return view('afspraken');
+    });
+    Route::get('/webshop', function () {
+        return view('webshop');
+    });
+});
 
 Auth::routes();
 

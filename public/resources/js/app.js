@@ -8,7 +8,15 @@ function selectBezorgdienst(bezorgdienst) {
 function calenderbutton(dateString) {
   document.getElementById('selectedDate').textContent = dateString;
   document.getElementsByClassName('calenderAppointment')[0].style.display = 'block';
-  console.log(dateString);
+
+  // Zet de datum in het juiste formaat in het invoerveld
+  const selectedDate = new Date(dateString);
+  selectedDate.setDate(selectedDate.getDate() + 1); // Voeg één dag toe
+  
+  const formattedDate = selectedDate.toISOString().split('T')[0];
+  document.getElementById('appointment_date').value = formattedDate; // Voeg deze regel toe
+  
+  console.log(formattedDate);
 }
 
 function hideCalendarAppointment() {

@@ -17,7 +17,7 @@
             </section>
             <section class="Uneed-Title">
                 <h1>
-                    <span class="cred">Vind onze bedrijf!</span>
+                    <span class="cred">Vind ons bedrijf!</span>
                 </h1>
             </section>
             <hr class="lineBlue">

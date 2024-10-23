@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('requests', function (Blueprint $table) {
-            Schema::rename("requests","appointments");
+        Schema::table('appointments', function (Blueprint $table) {
+            $table->decimal('price', 8, 2)->nullable()->change(); // Maak price nullable
         });
     }
 
@@ -25,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('appointments', function (Blueprint $table) {
+            $table->decimal('price', 8, 2)->nullable(false)->change(); // Zet terug naar niet-nullable als nodig
+        });
     }
 };
