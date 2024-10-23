@@ -22,7 +22,6 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
             <section class="month">
                 <a href="?month=<?php echo $currentMonth - 1 <= 0 ? 12 : $currentMonth - 1; ?>&year=<?php echo $currentMonth - 1 <= 0 ? $currentYear - 1 : $currentYear; ?>" class="nav">
                     <i class="fas fa-angle-left">
-                        << /i>
                 </a>
                 <section>
                     <?php echo date('F', strtotime("$currentYear-$currentMonth-01")); ?>
