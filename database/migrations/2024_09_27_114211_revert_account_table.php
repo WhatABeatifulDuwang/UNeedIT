@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::table('accounts', function (Blueprint $table) {
-            $table->string('remember_token')->nullable();
             $table->dropColumn('street_name');
             $table->dropColumn('street_number');
             $table->dropColumn('street_additional');
