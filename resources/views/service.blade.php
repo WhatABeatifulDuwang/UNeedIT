@@ -18,14 +18,14 @@
             <section class="Graphic-Design1">
                 <img src="" alt="">
                 <h1 class="Service-Text2">Software Development</h1>
-                <p class="Service-Paragraaf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit dignissimos, facere consectetur, ipsam delectus voluptatibus reiciendis quas, </p>
+                <p class="Service-Paragraaf">Bij Uneed-IT maken we unieke technologie die écht werken voor onze klanten. Van op maat gemaakte applicaties tot integratie van bestaande systemen.</p>
             </section>
 
             <!-- Product Design dienst -->
             <section class="Graphic-Design">
                 <img src="" alt="">
                 <h1 class="Service-Text">Product Design</h1>
-                <p class="Service-Paragraaf">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nihil provident ipsa ut optio sunt tenetur vitae excepturi consequuntur est, </p>
+                <p class="Service-Paragraaf">Bij Uneed-IT draait productdesign om het creëren van creatieve oplossingen. Ons designproces begint met een grondig begrip van jouw merk, gebruikers en doelen.</p>
             </section>
         </section>
 
@@ -35,21 +35,21 @@
             <section class="Graphic-Design1">
                 <img src="" alt="">
                 <h1 class="Service-Text2">Blog Writing</h1>
-                <p class="Service-Paragraaf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti, dolorum dolore, </p>
+                <p class="Service-Paragraaf">Onze bloggen zijn een krachtig middel om expertise te delen en klanten dichter bij technologie te brengen. Onze blogschrijvers combineren technische knowhow met een toegankelijke schrijfstijl, zodat zelfs complexe onderwerpen helder en interessant worden.</p>
             </section>
 
             <!-- Social Marketing dienst -->
             <section class="Graphic-Design">
                 <img src="" alt="">
                 <h1 class="Service-Text">Social Marketing</h1>
-                <p class="Service-Paragraaf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi ab quo tempore? </p>
+                <p class="Service-Paragraaf">Ons team analyseert continu de prestaties van elke campagne en past deze aan om maximale impact te bereiken. Zo zorgen we ervoor dat jouw boodschap opvalt in een drukke online wereld, zodat klant op de hoogte blijven. </p>
             </section>
 
             <!-- IT Services dienst -->
             <section class="Graphic-Design1">
                 <img src="" alt="">
                 <h1 class="Service-Text2">IT Services</h1>
-                <p class="Service-Paragraaf">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, accusantium? </p>
+                <p class="Service-Paragraaf">Met Uneed-IT heb je een partner die niet alleen problemen oplost, maar ze ook voorkomt. Of het nu gaat om netwerkbeheer, cybersecurity, of cloudoplossingen, wij zijn er om jouw IT vlekkeloos te laten draaien. </p>
             </section>
         </section>
     </section>

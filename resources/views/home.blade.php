@@ -12,21 +12,11 @@
         <section class="Uneed-Title">
             <h1>Welkom bij Uneed-IT!</h1>
             <hr class="lineRed">
+            <section class="secondary-info">
+                <p>Jouw partner voor slimme, betrouwbare en gebruiksvriendelijke IT-oplossingen. Onze werkzaamheden bestaan uit softwareontwikkeling en productdesign tot IT-services en social marketing: ons team zorgt ervoor dat jouw IT en technologie naadloos aansluiten bij jouw doelen en behoeftes.</p>
+            </section>
+            <br>
+            <hr class="lineBlue">
         </section>
     </section>
 </x-layout>
-
-<script>
-    let container = document.getElementById('Uneed-bg');
-    let windowHeight = window.innerHeight;
-    let scrollArea = 15 - windowHeight;
-    let Uneedit = document.getElementsByClassName('homeText')[0];
-
-    // update position of square 1 and square 2 when scroll event fires.
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || window.scrollTop;
-        let scrollPercent = scrollTop/scrollArea || -1;
-
-        Uneedit.style.top = 8 - scrollPercent*window.innerHeight*0.325 + 'px';
-    });
-</script>
