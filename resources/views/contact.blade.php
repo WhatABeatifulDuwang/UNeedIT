@@ -1,6 +1,6 @@
 <x-layout title="Contact">
     <section class="main-contact-content">
-        <section class="contact-content">
+        <section class="contact-container">
             <section class="Uneed-Title">
                 <h1>
                     <span class="cblue">Neem contact met ons op!</span>
@@ -17,7 +17,7 @@
             </section>
             <section class="Uneed-Title">
                 <h1>
-                    <span class="cred">Vind ons bedrijf!</span>
+                    <span class="cred">Vind onze bedrijf!</span>
                 </h1>
             </section>
             <hr class="lineBlue">

@@ -9,7 +9,7 @@
         </section>
         <hr class="lineRed">
         <!-- Hoofdtekst over het bedrijf -->
-        <section class="ootext">
+        <section class="about-text">
             <p class="white-text">
                 Welkom bij Uneed-IT, uw vertrouwde partner voor al uw reparatiebehoeften. Bij Uneed-IT streven we ernaar hoogwaardige kwalitatieve reparatiediensten te bieden met een onwrikbare focus op klanttevredenheid en excellentie in kwaliteit.
             </p>
