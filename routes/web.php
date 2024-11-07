@@ -44,6 +44,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('google/redirect', [GoogleController::class, 'redirect'])->name('google.redirect');
-Route::get('google/callback', [GoogleController::class, 'callback']);
-Route::post('google/addEvent', [GoogleController::class, 'addEventToCalendar'])->name('google.addEvent');
+Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
+Route::get('google/redirect', [AppointmentController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('google/callback', [AppointmentController::class, 'handleGoogleCallback'])->name('google.callback');

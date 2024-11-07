@@ -19,6 +19,11 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
                     {{ session('success') }}
                 </div>
             @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
             <section class="month">
                 <a href="?month=<?php echo $currentMonth - 1 <= 0 ? 12 : $currentMonth - 1; ?>&year=<?php echo $currentMonth - 1 <= 0 ? $currentYear - 1 : $currentYear; ?>" class="nav">
                     <i class="fas fa-angle-left"><</i>
@@ -64,15 +69,6 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
             <h2>Geselecteerde Datum: <span id="selectedDate"></span></h2>
             <form action="{{ route('appointments.store') }}" method="POST">
                 @csrf
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
                 <label for="type">Kies uw apparaat:</label>
                 <select name="device_type" id="type" required>
                     <optgroup label="Apparaat Type">
@@ -89,19 +85,8 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
                 <input type="text" name="place_of_appointment" placeholder="Plaats van afspraak" required>
                 <input type="time" name="appointment_time" placeholder="Tijd" required>
                 <input type="date" id="appointment_date" name="appointment_date" required hidden>
-
                 <input type="submit" value="Afspraak maken">
             </form>
-            
-            
-            <form method="POST" action="{{ route('google.addEvent') }}">
-                @csrf
-                <input type="text" name="summary" placeholder="Event Title">
-                <input type="datetime-local" name="start_time">
-                <input type="datetime-local" name="end_time">
-                <textarea name="description" placeholder="Event Description"></textarea>
-                <button type="submit">Add Event</button>
-            </form>            
         </section>
     </section>
 </x-layout>
