@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -42,3 +43,7 @@ Route::middleware(['auth'])->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('google/redirect', [GoogleController::class, 'redirect'])->name('google.redirect');
+Route::get('google/callback', [GoogleController::class, 'callback']);
+Route::post('google/addEvent', [GoogleController::class, 'addEventToCalendar'])->name('google.addEvent');

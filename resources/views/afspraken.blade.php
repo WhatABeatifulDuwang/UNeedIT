@@ -92,6 +92,16 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
 
                 <input type="submit" value="Afspraak maken">
             </form>
+            
+            
+            <form method="POST" action="{{ route('google.addEvent') }}">
+                @csrf
+                <input type="text" name="summary" placeholder="Event Title">
+                <input type="datetime-local" name="start_time">
+                <input type="datetime-local" name="end_time">
+                <textarea name="description" placeholder="Event Description"></textarea>
+                <button type="submit">Add Event</button>
+            </form>            
         </section>
     </section>
 </x-layout>
