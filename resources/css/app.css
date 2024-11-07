@@ -25,6 +25,10 @@ body {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+br, hr {
+    user-select: none;
+}
+
 hr.lineRed {
     border: 1px red solid;
     width: 50%;
@@ -70,6 +74,9 @@ hr.lineGold {
     text-align: center;
     align-items: center;
     gap: 1em;
+    background-repeat: var(2);
+    background-size: 60em;
+    background-image: url("/public/images/uneedit-digit-bg.png");
 
     .secondary-info {
         padding: 8px 4px 8px;
@@ -77,6 +84,17 @@ hr.lineGold {
 
         p {
             font-size: 25px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            transition: 0.3s;
+
+            &:hover {
+                color: #ffd700;
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -91,7 +109,6 @@ hr.lineGold {
     height: 20vh;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 13px;
-    transition: top 0.2s;
     user-select: none;
     z-index: 0;
 
@@ -182,7 +199,7 @@ hr.lineGold {
             margin-top: 5px;
         }
 
-        &:hover{
+        &:hover {
             .Service-Text a,
             .Service-Text2 a {
                 text-decoration: underline;
@@ -191,15 +208,10 @@ hr.lineGold {
     }
 
     .Service-Text a,
-    .Service-Text2 a{
+    .Service-Text2 a {
         color: white;
         margin-top: 45px;
         display: flex;
-        text-decoration: none;
-
-        &:hover{
-           color: #ffd700;
-        }
 
         .Service-Paragraaf {
             width: 300px;
@@ -226,11 +238,6 @@ hr.lineGold {
             padding: 5px;
             width: 520px;
             font-size: 20px;
-
-            .Service-Text a,
-            .Service-Text2 a {
-                text-decoration: underline;
-            }
         }
 
         &.Graphic-Design {
@@ -283,9 +290,12 @@ hr.lineGold {
         margin-left: 7.8vw;
         text-align: center;
         font-size: 2vh;
+
+        &:hover {
+            background: #dddddd;
+        }
     }
 }
-
 
 /* Faq Page*/
 
@@ -374,6 +384,7 @@ hr.lineGold {
                     color: blue;
                     text-decoration: none;
                     cursor: pointer;
+                    transition: 0.4s;
 
                     &:hover {
                         color: #ffd700;
@@ -524,7 +535,6 @@ hr.lineGold {
         padding: 5px;
         margin: 2px;
         text-align: left;
-
     }
 
     button {
@@ -547,7 +557,6 @@ hr.lineGold {
         padding: 5px;
         width: 15vw;
     }
-
 }
 
 
@@ -600,24 +609,23 @@ hr.lineGold {
 
 /* Four columns by default */
 column {
-    float: left;
-    width: 25%;
+        float: left;
+        width: 25%;
     }
 
     /* Two columns on medium screens */
     @media screen and (max-width: 992px) {
     .column {
-    width: 50%;
-    }
+        width: 50%;
+        }
     }
 
     /* One column on small screens */
     @media screen and (max-width: 600px) {
     .column {
-    width: 100%;
+        width: 100%;
+        }
     }
-    }
-
 
 /* Navbar */
 
@@ -730,6 +738,7 @@ column {
 
             p:hover {
                 color: #ffd700;
+                transition: 0.4s;
             }
         }
 
@@ -738,6 +747,7 @@ column {
 
             &:hover {
                 color: #ffd700;
+                transition: 0.4s;
             }
         }
 
@@ -759,4 +769,4 @@ column {
 #result {
     text-align: center;
     font-size: 2vh;
-}   
+}

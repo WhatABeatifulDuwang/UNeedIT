@@ -10,22 +10,22 @@
             <!-- Graphic Design dienst -->
             <section class="Graphic-Design">
                 <img src="" alt="">
-                <h1 class="Service-Text"><a href="{{ url('/') }}">Graphic Design</a></h1>
+                <h1 class="Service-Text">Graphic Design</h1>
                 <p class="Service-Paragraaf">Ons bedrijf biedt grafisch ontwerp diensten aan, zoals logo's, branding, webdesign, printmaterialen en visuele content.</p>
             </section>
 
             <!-- Software Development dienst -->
             <section class="Graphic-Design1">
                 <img src="" alt="">
-                <h1 class="Service-Text2"><a href="{{ url('/') }}">Software Development</a></h1>
+                <h1 class="Service-Text2">Software Development</h1>
                 <p class="Service-Paragraaf">Bij Uneed-IT maken we unieke technologie die echt werken voor onze klanten. Van op maat gemaakte applicaties tot integratie van bestaande systemen.</p>
             </section>
 
             <!-- Product Design dienst -->
             <section class="Graphic-Design">
                 <img src="" alt="">
-                <h1 class="Service-Text"><a href="{{ url('/') }}">Product Design</a></h1>
-                <p class="Service-Paragraaf">Bij Uneed-IT draait productdesign om het creëren van creatieve oplossingen. Ons designproces begint met een grondig begrip van jouw merk, gebruikers en doelen.</p>
+                <h1 class="Service-Text">Product Design</h1>
+                <p class="Service-Paragraaf">Bij Uneed-IT draait productdesign om het creëren van creatieve oplossingen. Ons designproces begint met een grondige begrippen van merken, gebruikers en doelen.</p>
             </section>
         </section>
 
@@ -34,22 +34,22 @@
             <!-- Blog Writing dienst -->
             <section class="Graphic-Design1">
                 <img src="" alt="">
-                <h1 class="Service-Text2"><a href="{{ url('/') }}">Blog Writing</a></h1>
+                <h1 class="Service-Text2">Blog Writing</h1>
                 <p class="Service-Paragraaf">Onze bloggen zijn een krachtig middel om expertise te delen en klanten dichter bij technologie te brengen. Onze blogschrijvers combineren technische knowhow met een toegankelijke schrijfstijl, zodat zelfs complexe onderwerpen helder en interessant worden.</p>
             </section>
 
             <!-- Social Marketing dienst -->
             <section class="Graphic-Design">
                 <img src="" alt="">
-                <h1 class="Service-Text"><a href="{{ url('/') }}">Social Marketing</a></h1>
-                <p class="Service-Paragraaf">Ons team analyseert continu de prestaties van elke campagne en past deze aan om maximale impact te bereiken. Zo zorgen we ervoor dat jouw boodschap opvalt in een drukke online wereld, zodat klant op de hoogte blijven. </p>
+                <h1 class="Service-Text">Social Marketing</h1>
+                <p class="Service-Paragraaf">Ons team analyseert continu de prestaties van elke campagne en past deze aan om maximale impact te bereiken. Zo zorgen we ervoor dat jouw boodschap opvalt in een drukke online wereld, zodat klant op de hoogte blijven.</p>
             </section>
 
             <!-- IT Services dienst -->
             <section class="Graphic-Design1">
                 <img src="" alt="">
-                <h1 class="Service-Text2"><a href="{{ url('/') }}">IT Services</a></h1>
-                <p class="Service-Paragraaf">Met Uneed-IT heb je een partner die niet alleen problemen oplost, maar ze ook voorkomt. Of het nu gaat om netwerkbeheer, cybersecurity, of cloudoplossingen, wij zijn er om jouw IT vlekkeloos te laten draaien. </p>
+                <h1 class="Service-Text2">IT Services</h1>
+                <p class="Service-Paragraaf">Met Uneed-IT heb je een partner die niet alleen problemen oplost, maar ze ook opslaat voor toekomstige problemen. Of het nu gaat om netwerkbeheer, cybersecurity, of cloudoplossingen, wij zijn er om jouw IT vlekkeloos te laten draaien.</p>
             </section>
         </section>
     </section>

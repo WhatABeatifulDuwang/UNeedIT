@@ -17,6 +17,14 @@
             </section>
             <br>
             <hr class="lineBlue">
+            <section class="secondary-info">
+                <h3 class="">Meer informatie kunt u in onze
+                    <a href="{{ url('/overOns') }}">Over ons</a> of
+                    <a href="{{ url('/service') }}">Service</a> pagina's vinden.
+                </h3>
+            </section>
+            <br>
+            <hr class="lineGold">
         </section>
     </section>
 </x-layout>
