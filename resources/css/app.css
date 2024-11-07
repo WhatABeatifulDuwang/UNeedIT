@@ -255,7 +255,7 @@ hr.lineGold {
     justify-content: center;
 
     .bezorgdiensten-text-container {
-        border: 2px solid red;
+        border: 3px solid red;
         color: white;
         margin-top: 12vh;
         height: 47vh;
@@ -264,7 +264,7 @@ hr.lineGold {
         background-color: rgba(51, 51, 51, 0.95);
 
         .textbezorg {
-            font-size: 3vh;
+            font-size: 2vh;
             display: flex;
             justify-content: center;
             text-align: center;
@@ -598,6 +598,26 @@ hr.lineGold {
     }
 }
 
+/* Four columns by default */
+column {
+    float: left;
+    width: 25%;
+    }
+
+    /* Two columns on medium screens */
+    @media screen and (max-width: 992px) {
+    .column {
+    width: 50%;
+    }
+    }
+
+    /* One column on small screens */
+    @media screen and (max-width: 600px) {
+    .column {
+    width: 100%;
+    }
+    }
+
 
 /* Navbar */
 
@@ -738,5 +758,5 @@ hr.lineGold {
 
 #result {
     text-align: center;
-    font-size: 3vh;
-}
+    font-size: 2vh;
+}   

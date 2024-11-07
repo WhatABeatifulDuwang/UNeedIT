@@ -1,6 +1,6 @@
 // Bezorgdiesnten pagina
 function selectBezorgdienst(bezorgdienst) {
-  document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen.`;
+  document.getElementById('result').innerText = `Je hebt ${bezorgdienst} gekozen. We bezorgen van 10:00 tot 17:30, maandag tot en met vrijdag.`;
   console.log(`${bezorgdienst} is gekozen.`);
 }
 

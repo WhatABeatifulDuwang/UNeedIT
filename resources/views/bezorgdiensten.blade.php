@@ -11,7 +11,7 @@
             <p class="textbezorg">Kies een bezorgdienst:</p>
             <ul class="bezordiensten-lc">
                 <!-- Knoppen voor het selecteren van een bezorgdienst -->
-                <li><button class="bezorgdiensten" onclick="selectBezorgdienst('UPS')">UPS</button></li>
+                <li><button class="bezorgdiensten" onclick="selectBezorgdienst('UPS')">UPS </button></li>
                 <li><button class="bezorgdiensten" onclick="selectBezorgdienst('DHL')">DHL</button></li>
                 <li><button class="bezorgdiensten" onclick="selectBezorgdienst('Homerr')">Homerr</button></li>
             </ul>
