@@ -8,7 +8,7 @@ use Google_Client;
 use Google_Service_Calendar;
 use Google_Service_Calendar_Event;
 use Google_Service_Calendar_EventDateTime;
-use Carbon\Carbon;  // Import Carbon
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 
@@ -43,33 +43,30 @@ class AppointmentController extends Controller
         $googleClient->addScope(Google_Service_Calendar::CALENDAR);
         $googleClient->setRedirectUri(route('google.callback'));
 
-        // Authenticate the token
         $token = $googleClient->fetchAccessTokenWithAuthCode($request->get('code'));
 
         if (isset($token['error'])) {
             return redirect()->route('google.redirect')->with('error', 'Google login failed.');
         }
 
-        // Store the token in session
         session(['google_token' => $token]);
         return redirect('afspraken')->with('success', 'Google login successful!');
     }
 
     /**
-     * Store a newly created appointment in storage and add to Google Calendar.
+     * Store a newly created appointment in storage and add to Google Calendar if selected.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        // Validate the incoming data
         $validatedData = $request->validate([
             'device_name' => 'required|string|max:255',
             'device_type' => [
                 'required',
                 'string',
-                Rule::in('Tablet','Telefoon','Laptop','Desktop','Overig'),
+                Rule::in('Tablet', 'Telefoon', 'Laptop', 'Desktop', 'Overig'),
             ],
             'description' => 'required|string',
             'appointment_date' => 'required|date',
@@ -77,85 +74,78 @@ class AppointmentController extends Controller
             'place_of_appointment' => [
                 'required',
                 'string',
-                Rule::in(['Rotterdam','Den Haag','Amsterdam','Utrecht']),
+                Rule::in(['Rotterdam', 'Den Haag', 'Amsterdam', 'Utrecht']),
             ],
             'price' => '|numeric|min:0',
+            'add_to_google_calendar' => 'nullable|boolean',
         ]);
 
-        // Add the user ID
         $validatedData['account_id'] = auth()->user()->id;
 
-        // Create a new appointment in the database
         $appointment = Appointment::create($validatedData);
 
-        // Initialize Google Client
-        $googleClient = new Google_Client();
-        $googleClient->setAuthConfig(storage_path('app/google_credentials.json'));
-        $googleClient->addScope(Google_Service_Calendar::CALENDAR);
+        if ($request->has('add_to_google_calendar') && $request->add_to_google_calendar == 1) {
+            $googleClient = new Google_Client();
+            $googleClient->setAuthConfig(storage_path('app/google_credentials.json'));
+            $googleClient->addScope(Google_Service_Calendar::CALENDAR);
 
-        // Get the access token from the session
-        $accessToken = session('google_token');
+            $accessToken = session('google_token');
 
-        if (!$accessToken) {
-            return redirect()->route('google.redirect');
-        }
-
-        $googleClient->setAccessToken($accessToken);
-
-        // Check if the token is expired
-        if ($googleClient->isAccessTokenExpired()) {
-            // Try to refresh the token
-            if ($googleClient->getRefreshToken()) {
-                $googleClient->fetchAccessTokenWithRefreshToken($googleClient->getRefreshToken());
-                // Save the new access token
-                session(['google_token' => $googleClient->getAccessToken()]);
-            } else {
-                // Redirect to the login page if no refresh token exists
+            if (!$accessToken) {
                 return redirect()->route('google.redirect');
             }
-        }
 
-        // Initialize Google Calendar service
-        $service = new Google_Service_Calendar($googleClient);
+            $googleClient->setAccessToken($accessToken);
 
-        // Define the start and end time for the event
-        $startTime = Carbon::parse($request->appointment_date . ' ' . $request->appointment_time)->subHour(); // Set 1 hour earlier
-        $endTime = $startTime->copy()->addHour(); // Set the end time to 1 hour after the start time
+            if ($googleClient->isAccessTokenExpired()) {
+                if ($googleClient->getRefreshToken()) {
+                    $googleClient->fetchAccessTokenWithRefreshToken($googleClient->getRefreshToken());
+                    session(['google_token' => $googleClient->getAccessToken()]);
+                } else {
+                    return redirect()->route('google.redirect');
+                }
+            }
 
-        // Create the event object
-        $event = new Google_Service_Calendar_Event([
-            'summary' => 'Appointment: ' . $request->device_name,
-            'description' => $request->description,
-            'location' => $request->place_of_appointment,
-            'start' => new Google_Service_Calendar_EventDateTime([
-                'dateTime' => $startTime->toAtomString(),
-                'timeZone' => 'Europe/Amsterdam',
-            ]),
-            'end' => new Google_Service_Calendar_EventDateTime([
-                'dateTime' => $endTime->toAtomString(),
-                'timeZone' => 'Europe/Amsterdam',
-            ]),
-            'reminders' => [
-                'useDefault' => false,  // Disable the default reminders
-                'overrides' => [
-                    [
-                        'method' => 'popup',  // Set a popup reminder
-                        'minutes' => 1440,    // 1440 minutes = 1 day before
+            $service = new Google_Service_Calendar($googleClient);
+
+            $startTime = Carbon::parse($request->appointment_date . ' ' . $request->appointment_time)->subHour();
+            $endTime = $startTime->copy()->addHour();
+
+            $event = new Google_Service_Calendar_Event([
+                'summary' => 'Appointment: ' . $request->device_name,
+                'description' => $request->description,
+                'location' => $request->place_of_appointment,
+                'start' => new Google_Service_Calendar_EventDateTime([
+                    'dateTime' => $startTime->toAtomString(),
+                    'timeZone' => 'Europe/Amsterdam',
+                ]),
+                'end' => new Google_Service_Calendar_EventDateTime([
+                    'dateTime' => $endTime->toAtomString(),
+                    'timeZone' => 'Europe/Amsterdam',
+                ]),
+                'reminders' => [
+                    'useDefault' => false,
+                    'overrides' => [
+                        [
+                            'method' => 'popup',
+                            'minutes' => 1440,
+                        ],
                     ],
                 ],
-            ],
-        ]);
+            ]);
 
-        // Insert the event into the Google Calendar
-        try {
-            $event = $service->events->insert('primary', $event);
-            // Store the event ID or other relevant info in your database if needed
-        } catch (\Google_Service_Exception $e) {
-            Log::error('Google API Error: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'There was an error adding the event to Google Calendar.');
+
+            try {
+                $event = $service->events->insert('primary', $event);
+
+            } catch (\Google_Service_Exception $e) {
+                Log::error('Google API Error: ' . $e->getMessage());
+                return redirect()->back()->with('error', 'Er was een error tijdens het toevoegen aan de Google Calender.');
+            }
+
+            return redirect('/afspraken')->with('success', 'Afspraak succesvol gemaakt en toegevoegd aan je Google Kalender!');
         }
 
-        // Redirect back with success message
-        return redirect()->back()->with('success', 'Afspraak succesvol gemaakt en toegevoegd aan je Google Kalender!');
+        return redirect('/afspraken')->with('success', 'Afspraak succesvol gemaakt!');
     }
 }

@@ -94,6 +94,10 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
                 </select>
                 <input type="time" name="appointment_time" placeholder="Tijd" required>
                 <input type="date" id="appointment_date" name="appointment_date" required hidden>
+                <label for="add_to_google_calendar">
+                    <input type="checkbox" id="add_to_google_calendar" name="add_to_google_calendar" value="1">
+                    Add to Google Calendar
+                </label>
                 <input type="submit" value="Afspraak maken">
             </form>
         </section>
