@@ -165,7 +165,7 @@ hr.lineGold {
         color: white;
 
         p {
-            font-size: 24px;
+            font-size: 2vh;
         }
     }
 }
@@ -215,13 +215,14 @@ hr.lineGold {
 
         .Service-Paragraaf {
             width: 300px;
+
         }
     }
 
     .Graphic-Design,
     .Graphic-Design1 {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 19px;
+        font-size: 2vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -232,6 +233,7 @@ hr.lineGold {
         height: 270px;
         margin: 0 1vh;
         justify-content: center;
+        text-align: center  ;
 
         &:hover {
             border: solid 2px;
@@ -381,7 +383,7 @@ hr.lineGold {
                 user-select: none;
 
                 a {
-                    color: blue;
+                    color: white;
                     text-decoration: none;
                     cursor: pointer;
                     transition: 0.4s;
@@ -414,9 +416,9 @@ hr.lineGold {
 
 .calendar {
     font-size: 2.5vh;
-    width: 40vw;
-    height: 80vh;
-    margin-top: 16vh;
+    width: 35vw;
+    height: 75vh;
+    margin-top: 10px;
     display: inline-grid;
     justify-content: center;
     align-items: center;
@@ -469,6 +471,7 @@ hr.lineGold {
         color: #999;
         font-weight: 600;
         margin-bottom: 15px;
+        font-size: 15px;
 
         span {
             justify-self: center;
@@ -481,7 +484,7 @@ hr.lineGold {
     .dates {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 25px;
+        gap: 20px;
 
         button {
             color: rgb(220, 21, 21);
@@ -490,11 +493,12 @@ hr.lineGold {
             border: 0;
             background: transparent;
             font-family: 'Montserrat', sans-serif;
-            width: 100%;
+            width: 80%;
             height: 60px;
+            font-size: 15px;
             border-radius: 10px;
             transition-duration: .2s;
-            padding: 10px;
+            padding: 5px;
 
             &.today {
                 color: red;
@@ -519,8 +523,8 @@ hr.lineGold {
     text-align: center;
     font-size: 2.5vh;
     width: 20vw;
-    height: 63vh;
-    margin-top: 23vh;
+    height: 70vh;
+    margin-top: 1vh;
     margin-left: 5vh;
     display: inline-grid;
     justify-content: center;
@@ -556,6 +560,48 @@ hr.lineGold {
         text-align:left;
         padding: 5px;
         width: 15vw;
+    }
+
+    #time {
+        font-size: 2.5vh;
+        text-align:left;
+        padding: 5px;
+        width: 15vw;
+    }
+
+    #date {
+        font-size: 2.5vh;
+        text-align:left;
+        padding: 5px;
+        width: 15vw;
+    }
+
+}
+
+@media screen and (min-height: 2000px) and (min-width: 1100px) {
+    .calendar {
+        width: 40vw;
+        height: 80vh;
+        margin-top: 16vh;
+
+        .days {
+            font-size: 40px
+        }
+
+        .dates {
+            gap: 25px;
+
+            button {
+                font-size: 40px;
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+
+    .calenderAppointment {
+        height: 63vh;
+        margin-top: 23vh;
     }
 }
 

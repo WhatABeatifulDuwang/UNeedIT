@@ -47,16 +47,16 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
             </section>
             <section class="dates">
                 <?php
-                
+
                 for ($i = 1; $i < $firstDayOfMonth; $i++) {
                     echo '<span></span>'; // Lege ruimte voor uitlijning
                 }
-                
+
                 // Loop door de dagen van de maand
                 for ($d = 1; $d <= $daysInMonth; $d++) {
                     // Maak een geformatteerde datumstring
                     $dateString = date('F j, Y', strtotime("$currentYear-$currentMonth-$d"));
-                
+
                     // Controleer of de datum de huidige datum is
                     $isToday = $d == date('j') ? 'today' : '';
                     echo "<button class='$isToday' onclick='calenderbutton(\"$dateString\")'><time>$d</time></button>";
@@ -82,7 +82,16 @@ $firstDayOfMonth = date('N', strtotime("$currentYear-$currentMonth-01"));
                 </select>
                 <input type="text" name="device_name" placeholder="Apparaat naam" required>
                 <input type="text" name="description" placeholder="Omschrijving" required>
-                <input type="text" name="place_of_appointment" placeholder="Plaats van afspraak" required>
+                <label for="place_of_appointment">Kies uw plaats van afspraak:</label>
+                <select name="place_of_appointment" id="type" required>
+                    <optgroup label="Plaats in Nederland">
+                        <option value="" selected disabled hidden>Kies hier...</option>
+                        <option value="Rotterdam">Rotterdam</option>
+                        <option value="DenHaag">Den Haag</option>
+                        <option value="Amsterdam">Amsterdam</option>
+                        <option value="Utrecht">Utrecht</option>
+                    </optgroup>
+                </select>
                 <input type="time" name="appointment_time" placeholder="Tijd" required>
                 <input type="date" id="appointment_date" name="appointment_date" required hidden>
                 <input type="submit" value="Afspraak maken">
