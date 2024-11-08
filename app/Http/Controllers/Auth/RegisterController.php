@@ -50,6 +50,7 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        // Alle regels omtrent het valideren van data om een account aan te maken
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'min:2', 'max:20'],
             'last_name' => ['required', 'string', 'min:2', 'max:20'],
@@ -77,9 +78,11 @@ class RegisterController extends Controller
     protected function create(array $data): Account
     {
         return Account::create([
+            // De eerste letter van de voornaam en achternaam worden in hoofdletter in de database gezet
             'first_name' => ucfirst($data['first_name']),
             'last_name' => ucfirst($data['last_name']),
             'email' => $data['email'],
+            // Het wachtwoord wordt gehashed
             'password' => Hash::make($data['password']),
             'admin' => '0',
         ]);

@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Deze seeder roept beide seeders aan
         $this->call([
             AccountSeeder::class,
             AppointmentSeeder::class

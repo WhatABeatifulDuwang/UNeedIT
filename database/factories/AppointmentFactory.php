@@ -17,6 +17,7 @@ class AppointmentFactory extends Factory
      */
     public function definition()
     {
+        // Maakt dummy data voor afspraken aan in de database
         return [
             'device_name' => fake()->name(),
             'device_type' => fake()->word,
@@ -25,8 +26,8 @@ class AppointmentFactory extends Factory
             'appointment_time' => $this->faker->time(),
             'place_of_appointment' => $this->faker->address(),
             'price' => $this->faker->randomFloat(2, 0, 1000),
+            // Pakt een random account ID die al bestaat in de database
             'account_id' => $this->faker->randomElement(Account::pluck('id')),
         ];
     }
 }
-                

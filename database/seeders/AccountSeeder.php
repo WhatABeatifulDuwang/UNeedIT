@@ -17,6 +17,7 @@ class AccountSeeder extends Seeder
     {
         Account::factory()
             ->count(10)
+            // Geeft elke seeded account een admin value of niet
             ->state(new Sequence(
                 ['admin' => 0],
                 ['admin' => 1],

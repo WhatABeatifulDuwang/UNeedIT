@@ -17,6 +17,7 @@ class AppointmentSeeder extends Seeder
     {
         Appointment::factory()
             ->count(20)
+            // Geeft elke afspraak verschillende type namen
             ->state(new Sequence(
                 ['device_name' => 'iPhone'],
                 ['device_name' => 'iPad'],
@@ -32,6 +33,7 @@ class AppointmentSeeder extends Seeder
                 ['device_name' => 'Linux'],
                 ['device_name' => 'Windows'],
             ))
+            // Geeft elke afspraak een verschillende type apparaat
             ->state(new Sequence(
                 ['device_type' => 'Laptop'],
                 ['device_type' => 'Phone'],

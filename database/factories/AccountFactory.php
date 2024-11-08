@@ -19,10 +19,12 @@ class AccountFactory extends Factory
      */
     public function definition()
     {
+        // Maakt dummy data voor accounts in de database
         return [
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'email' => fake()->unique()->safeEmail(),
+            // Wachtwoorden worden gehashed
             'password' => static::$password ??= Hash::make('password'),
         ];
     }
