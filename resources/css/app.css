@@ -52,6 +52,10 @@ hr.lineGold {
     margin-bottom: 2.5vh;
 }
 
+.no-scrollbar {
+    overflow: hidden;
+}
+
 /* Home page */
 
 .main-content {
@@ -140,7 +144,7 @@ hr.lineGold {
 /* Over Ons Page*/
 
 .OverOns {
-    padding-bottom: 300px;
+    padding-bottom: 100vh;
     min-height: 100vh;
     overflow-y: auto;
     box-sizing: border-box;
@@ -334,6 +338,10 @@ hr.lineGold {
             margin-bottom: 10px;
             padding: 8px;
             cursor: pointer;
+
+            &:hover {
+                color: #dddddd;
+            }
         }
 
         .answer {
@@ -390,7 +398,7 @@ hr.lineGold {
                 user-select: none;
 
                 a {
-                    color: white;
+                    color: blue;
                     text-decoration: none;
                     cursor: pointer;
                     transition: 0.4s;

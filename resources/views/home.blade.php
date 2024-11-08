@@ -13,7 +13,7 @@
             <h1>Welkom bij Uneed-IT!</h1>
             <hr class="lineRed">
             <section class="secondary-info">
-                <p>Jouw partner voor slimme, betrouwbare en gebruiksvriendelijke IT-oplossingen. Onze werkzaamheden bestaan uit softwareontwikkeling en productdesign tot IT-services en social marketing: ons team zorgt ervoor dat jouw IT en technologie naadloos aansluiten bij jouw doelen en behoeftes.</p>
+                <p>Jouw partner voor slimme, betrouwbare en gebruiksvriendelijke IT-oplossingen. Onze werkzaamheden bestaan uit professionele reparateurs. Ons team zorgt ervoor dat jouw IT apparaten naadloos aangesloten en met behoeften gerapareert worden.</p>
             </section>
             <br>
             <hr class="lineBlue">
