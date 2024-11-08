@@ -10,6 +10,7 @@ use Google_Service_Calendar_Event;
 use Google_Service_Calendar_EventDateTime;
 use Carbon\Carbon;  // Import Carbon
 use Illuminate\Support\Facades\Log;
+use Illuminate\Validation\Rule;
 
 class AppointmentController extends Controller
 {
@@ -65,11 +66,19 @@ class AppointmentController extends Controller
         // Validate the incoming data
         $validatedData = $request->validate([
             'device_name' => 'required|string|max:255',
-            'device_type' => 'required|string',
+            'device_type' => [
+                'required',
+                'string',
+                Rule::in('Tablet','Telefoon','Laptop','Desktop','Overig'),
+            ],
             'description' => 'required|string',
             'appointment_date' => 'required|date',
             'appointment_time' => 'required|date_format:H:i',
-            'place_of_appointment' => 'required|string|max:255',
+            'place_of_appointment' => [
+                'required',
+                'string',
+                Rule::in(['Rotterdam','Den Haag','Amsterdam','Utrecht']),
+            ],
             'price' => '|numeric|min:0',
         ]);
 
@@ -83,7 +92,7 @@ class AppointmentController extends Controller
         $googleClient = new Google_Client();
         $googleClient->setAuthConfig(storage_path('app/google_credentials.json'));
         $googleClient->addScope(Google_Service_Calendar::CALENDAR);
-        
+
         // Get the access token from the session
         $accessToken = session('google_token');
 
