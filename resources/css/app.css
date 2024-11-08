@@ -625,33 +625,33 @@ hr.lineGold {
     background-repeat: no-repeat;
     background-size: 200vh;
 
+    .info {
+        p {
+            padding-left: 2vw;
+            text-align: left;
+            color: gray;
+            font-style: italic;
+        }
+    }
+
     .bottom {
         color: #eee;
     }
 
-    .registreren-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 2vh;
-
-        h1 {
-            text-align: center;
-        }
-
-        #first_name,
-        #last_name,
-        #confirm_password,
-        #street_name,
-        #street_number,
-        #street_additional,
-        #city,
-        #country,
-        #postal_code {
-            font-size: 3vh;
-            border-radius: 10px;
-        }
+    h1 {
+        text-align: center;
     }
+
+    #first_name,
+    #last_name,
+    #email,
+    #password,
+    #password_confirm {
+        font-size: 2vh;
+        border-radius: 10px;
+        text-align: left;
+    }
+
     .card{
         font-size: 2vh;
         margin-top: 10vh;

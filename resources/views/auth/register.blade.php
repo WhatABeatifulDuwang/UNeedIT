@@ -45,7 +45,14 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div class="info">
+                            <p>
+                                Het wachtwoord moet het volgende bevatten:<br>
+                                * Minimaal 10 tekens<br>
+                                * Minimaal één hoofdletter en één kleine letter<br>
+                                * Minimaal één speciale teken
+                            </p>
+                        </div>
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Wachtwoord') }}</label>
 
