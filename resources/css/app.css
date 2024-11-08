@@ -198,13 +198,6 @@ hr.lineGold {
         &.Service-Align2 {
             margin-top: 5px;
         }
-
-        &:hover {
-            .Service-Text a,
-            .Service-Text2 a {
-                text-decoration: underline;
-            }
-        }
     }
 
     .Service-Text a,
@@ -212,11 +205,18 @@ hr.lineGold {
         color: white;
         margin-top: 45px;
         display: flex;
+        text-decoration: none;
 
         .Service-Paragraaf {
             width: 300px;
 
         }
+
+        &:hover{
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
     }
 
     .Graphic-Design,
@@ -240,6 +240,12 @@ hr.lineGold {
             padding: 5px;
             width: 520px;
             font-size: 20px;
+
+            .Service-Text a,
+            .Service-Text2 a {
+                text-decoration: underline;
+            }
+
         }
 
         &.Graphic-Design {

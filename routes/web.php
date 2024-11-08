@@ -18,6 +18,30 @@ Route::get('/service', function () {
     return view('service');
 });
 
+Route::get('/serviceGraphic', function () {
+    return view('serviceGraphic');
+});
+
+Route::get('/serviceSoftware', function () {
+    return view('serviceSoftware');
+});
+
+Route::get('/serviceProduct', function () {
+    return view('serviceProduct');
+});
+
+Route::get('/serviceWrite', function () {
+    return view('serviceWrite');
+});
+
+Route::get('/serviceSocial', function () {
+    return view('serviceSocial');
+});
+
+Route::get('/it-services', function () {
+    return view('it-services');
+});
+
 Route::get('/contact', function () {
     return view('contact');
 });
