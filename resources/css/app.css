@@ -226,11 +226,11 @@ hr.lineGold {
     .Graphic-Design,
     .Graphic-Design1 {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 2vh;
+        font-size: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: solid 1vh;
+        border: solid 0.8vh;
         border-radius: 7px;
         transition: 0.2s;
         width: 500px;
@@ -259,6 +259,19 @@ hr.lineGold {
         &.Graphic-Design1 {
             border-color: rgb(234, 14, 14);
         }
+    }
+}
+
+@media (min-width: 2560px) {
+    .Service-Container {
+        height: 100vh;
+    }
+
+    .Service-Align,
+    .Service-Align2 {
+        width: 60vw;
+        margin-left: 20vw;
+        padding: 20px;
     }
 }
 
