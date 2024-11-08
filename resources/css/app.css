@@ -192,7 +192,7 @@ hr.lineGold {
         display: flex;
         justify-content: space-evenly;
         transition: 0.2s;
-        width: 78vw;
+        width: 85vw;
         margin-left: 10vw;
 
         &.Service-Align {
@@ -398,13 +398,13 @@ hr.lineGold {
                 user-select: none;
 
                 a {
-                    color: blue;
+                    color: white;
                     text-decoration: none;
                     cursor: pointer;
                     transition: 0.4s;
 
                     &:hover {
-                        color: #ffd700;
+                        color: mediumturquoise;
                         text-decoration: underline;
                     }
                 }
