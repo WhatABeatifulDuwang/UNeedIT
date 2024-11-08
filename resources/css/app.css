@@ -624,18 +624,21 @@ hr.lineGold {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 200vh;
+    background-color: gray;
+    font-weight: bold;
 
     .info {
         p {
             padding-left: 2vw;
             text-align: left;
-            color: gray;
+            color: lightgray;
             font-style: italic;
+            font-weight: bold;
         }
     }
 
     .bottom {
-        color: #eee;
+        color: gray;
     }
 
     h1 {
@@ -657,6 +660,8 @@ hr.lineGold {
         margin-top: 10vh;
         margin-bottom: 10vh;
         width: 25vw ;
+        background-color: rgba(51, 51, 51, 0.95);
+        color: white;
     }
 }
 
